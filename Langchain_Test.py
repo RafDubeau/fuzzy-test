@@ -6,8 +6,6 @@ from langchain.memory import SimpleMemory
 from langchain.chains import LLMChain, SequentialChain, TransformChain
 import re
 
-import json
-
 
 initial_itinerary = """Day 1: Embarkation Day
 Morning
