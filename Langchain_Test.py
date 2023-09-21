@@ -1,6 +1,5 @@
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
-from langchain.prompts import PromptTemplate
 from langchain.prompts.chat import SystemMessage, HumanMessagePromptTemplate, ChatPromptTemplate
 from langchain.memory import SimpleMemory
 from langchain.chains import LLMChain, SequentialChain, TransformChain
