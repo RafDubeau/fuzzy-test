@@ -6,15 +6,15 @@ from langchain.agents.agent_types import AgentType
 from langchain.chat_models import ChatOpenAI
 
 agent_executor = create_python_agent(
-    llm=OpenAI(temperature=0),
+    llm=OpenAI(temperature=0, max_tokens=-1),
     tool=PythonREPLTool(),
     verbose=True,
     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
 )
 
-agent_executor.run("Generate the first 10 prime numbers")
+# agent_executor.run("Generate the first 10 prime numbers")
 
-# agent_executor.run("Generate the first 10 Mersenne prime numbers")
+agent_executor.run("Generate the first 10 Mersenne prime numbers")
 
 # agent_executor.run(
 #     """Understand, write a single neuron neural network in PyTorch.

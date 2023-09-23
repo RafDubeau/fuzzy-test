@@ -18,5 +18,5 @@ self_ask_with_search = initialize_agent(
     tools, llm, agent=AgentType.SELF_ASK_WITH_SEARCH, verbose=True
 )
 self_ask_with_search.run(
-    "How old is the quarterback of the Minnesota Vikings?"
+    "What date was JFK's oldest sister born and what was the average temperature in the US that year (in celsius)?"
 )
