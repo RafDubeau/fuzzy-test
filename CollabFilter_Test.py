@@ -149,22 +149,20 @@ def get_model(full_interactions):
     return model
 
 
-def fit_model_from_user_data(user_data):
+def fit_model_from_user_data(model, user_data):
     # Generate CSR matrix from user data
     cols = np.array([])
     rows = np.array([])
     affiliation = np.array([])
 
     for u in range(n_users):
-        user_idx = u
-        item_ids = user_data[user_idx]["item_ids"]
+        item_ids = user_data[u]["item_ids"]
 
         cols = np.append(cols, item_ids, axis=0)
         rows = np.append(rows, u * np.ones_like(item_ids), axis=0)
-        affiliation = np.append(affiliation, user_data[user_idx]["affiliation"], axis=0)
+        affiliation = np.append(affiliation, user_data[u]["affiliation"], axis=0)
     
     matrix = csr_matrix((affiliation, (rows, cols)), shape=(n_users, n_items))
-    print(matrix.todense())
 
     model.fit(matrix)
 
@@ -277,6 +275,7 @@ if __name__ == "__main__":
     # Update remaining user factors
     model = update_user_factors(np.arange(5), user_data, model)
     plot_before_after(user_factors_2d, item_factors_2d, model.user_factors, model.item_factors, user_pca, item_pca)
+    
 
 
     # model = fit_model_from_user_data(user_data)
