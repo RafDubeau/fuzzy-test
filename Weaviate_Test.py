@@ -2,11 +2,13 @@ import weaviate
 import requests
 import json
 
+import os
+
 client = weaviate.Client(
     url="https://test-cluster-ljsb7fh8.weaviate.network",  # Replace with your endpoint
     auth_client_secret=weaviate.AuthApiKey(api_key="CUWrOUtRalQAQxiMfMv6y13TmulH7x0w4Xcd"),  # Replace w/ your Weaviate instance API key
         additional_headers = {
-        "X-OpenAI-Api-Key": "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"  # Replace with your inference API key
+        "X-OpenAI-Api-Key": os.environ["OPENAI_API_KEY"]  # Replace with your OpenAI API key
     }
 )
 
@@ -60,23 +62,31 @@ print(json.dumps(response, indent=4))
 
 class WeaviateAPI:
 
-    def __init__(self, field_map, class_name, verbose=False):
+    def __init__(self, verbose=False):
         self.client = weaviate.Client(
             url="https://test-cluster-ljsb7fh8.weaviate.network",  # Replace with your endpoint
             auth_client_secret=weaviate.AuthApiKey(api_key="CUWrOUtRalQAQxiMfMv6y13TmulH7x0w4Xcd"),  # Replace w/ your Weaviate instance API key
             additional_headers = {
-                "X-OpenAI-Api-Key": "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"  # Replace with your inference API key
+                "X-OpenAI-Api-Key": "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"  # Replace with your OpenAI API key
             }
         )
 
-        self.field_map = field_map
-        self.class_name = class_name
+        self.field_map = None
+        self.class_name = None
 
         self.verbose = verbose
 
     
-    def create_class(self, class_obj):
+    def set_class(self, class_name, field_map):
+        self.class_name = class_name
+        self.field_map = field_map
+
+    
+    def create_class(self, class_obj, field_map):
         self.client.schema.create_class(class_obj)
+
+        return WeaviateAPI(class_obj["class"], field_map, verbose=self.verbose)
+
 
     def set_verbose(self, verbose):
         self.verbose = verbose
@@ -91,6 +101,9 @@ class WeaviateAPI:
         - batch_size (int, optional): Size of the batch. Defaults to 100.
 
         """
+
+        if self.class_name is None or self.field_map is None:
+            raise ValueError("Class name and field map must be set before importing data.")
         
         self._client.batch.configure(batch_size=batch_size)
         with self._client.batch as batch:
@@ -113,6 +126,9 @@ class WeaviateAPI:
 
 
     async def query_by_uuid(self, uuid: str, fields: list[str]):
+        if self.class_name is None or self.field_map is None:
+            raise ValueError("Class name and field map must be set before querying data.")
+
         response = await (
             client.query
             .get(self.class_name, [self.field_map[field] for field in fields]).with_where({"path": "id", "operator": "Equal", "valueString": uuid})
@@ -120,9 +136,11 @@ class WeaviateAPI:
         )
 
         return response
-    
 
     async def query_by_text(self, text: str | list[str], fields: list[str], limit: int = 10):
+        if self.class_name is None or self.field_map is None:
+            raise ValueError("Class name and field map must be set before querying data.")
+
         if isinstance(text, str):
             text = [text]
 
@@ -138,3 +156,13 @@ class WeaviateAPI:
         return response
 
 
+if __name__ == "__main__":
+    weaviate_api = WeaviateAPI(verbose=True)
+    weaviate_api.set_class("Item", {
+        "id": "id",
+        "question": "Question",
+        "answer": "Answer",
+        "category": "Category"
+    })
+
+    weaviate_api.query_by_text()
