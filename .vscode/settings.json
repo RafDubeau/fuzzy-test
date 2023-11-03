@@ -1,0 +1,13 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.analysis.extraPaths": ["./local_dependencies"],
+  "cSpell.words": [
+    "langchain",
+    "tqdm",
+    "unbookmarked",
+    "unliked",
+    "weaviate"
+  ]
+}

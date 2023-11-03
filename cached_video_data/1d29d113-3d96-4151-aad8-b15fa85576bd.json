@@ -1,0 +1,32 @@
+{
+    "productDescription": "Explore the stunning landscapes and rich culture of Bali",
+    "productHighlights": [
+        "Visit the famous rice terraces of Tegalalang",
+        "Experience a traditional Balinese dance performance",
+        "Relax on the beautiful beaches of Nusa Dua"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Bali",
+        "Day 2: Visit Tegalalang rice terraces",
+        "Day 3: Explore Ubud and watch a Balinese dance performance",
+        "Day 4: Relax on the beaches of Nusa Dua",
+        "Day 5: Departure from Bali"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Bali, Indonesia",
+    "productTitle": "Discover Bali",
+    "sourceVideoDescription": "A captivating video showcasing the beauty of Bali",
+    "videoIntelligenceDescription": "This video provides an immersive experience of Bali's landscapes, culture, and beaches",
+    "videoIntelligenceObjects": {
+        "duration": 3600,
+        "resolution": 1080,
+        "aspect_ratio": 1.7777777777777777
+    },
+    "videoTextOnScreen": [
+        "Welcome to Bali!",
+        "Experience the magic of Tegalalang rice terraces",
+        "Immerse yourself in traditional Balinese dance",
+        "Relax on the stunning beaches of Nusa Dua"
+    ],
+    "videoTranscript": "Welcome to Bali! In this video, we will take you on a journey to explore the stunning landscapes, rich culture, and beautiful beaches of Bali. Get ready to immerse yourself in the magic of Tegalalang rice terraces, experience a traditional Balinese dance performance, and relax on the stunning beaches of Nusa Dua. Join us on this unforgettable adventure in Bali!"
+}

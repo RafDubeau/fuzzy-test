@@ -1,0 +1,26 @@
+{
+    "productDescription": "Embark on a tropical adventure to the pristine beaches and lush rainforests of Costa Rica.",
+    "productHighlights": [
+        "Relax on the pristine beaches",
+        "Explore the Monteverde Cloud Forest",
+        "Spot exotic wildlife in Manuel Antonio National Park"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in San Jose",
+        "Day 2: Monteverde Cloud Forest Tour",
+        "Day 3: Manuel Antonio National Park"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Costa Rica",
+    "productTitle": "Costa Rican Paradise",
+    "videoIntelligenceDescription": "This video showcases the natural beauty of Costa Rica. From its stunning beaches to its diverse wildlife, Costa Rica is a paradise for nature enthusiasts and adventure seekers.",
+    "videoIntelligenceObjects": {
+        "beaches": 22,
+        "rainforests": 17,
+        "wildlife": 9
+    },
+    "videoTextOnScreen": [
+        "Experience the wonders of Costa Rica",
+        "Discover the biodiversity of the country"
+    ]
+}

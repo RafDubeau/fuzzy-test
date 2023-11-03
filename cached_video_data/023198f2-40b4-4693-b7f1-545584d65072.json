@@ -1,0 +1,32 @@
+{
+    "productDescription": "Embark on a thrilling adventure in the Amazon rainforest",
+    "productHighlights": [
+        "Explore the diverse wildlife of the Amazon",
+        "Experience a night safari",
+        "Visit indigenous communities"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Manaus",
+        "Day 2: Explore the Amazon rainforest",
+        "Day 3: Experience a night safari",
+        "Day 4: Visit indigenous communities",
+        "Day 5: Departure from Manaus"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Amazon Rainforest, Brazil",
+    "productTitle": "Amazon Rainforest Expedition",
+    "sourceVideoDescription": "Embark on a thrilling adventure in the Amazon rainforest",
+    "videoIntelligenceDescription": "This video takes you deep into the Amazon rainforest, showcasing its diverse wildlife, night safari experience, and encounters with indigenous communities",
+    "videoIntelligenceObjects": {
+        "duration": 3600,
+        "resolution": 1080,
+        "aspect_ratio": 1.7777777777777777
+    },
+    "videoTextOnScreen": [
+        "Welcome to the Amazon rainforest!",
+        "Explore the diverse wildlife",
+        "Experience a thrilling night safari",
+        "Visit indigenous communities"
+    ],
+    "videoTranscript": "Welcome to the Amazon rainforest! Join us on an unforgettable expedition into the heart of the world's largest tropical rainforest. Explore its diverse wildlife, experience a thrilling night safari, and visit indigenous communities to learn about their rich culture and way of life. Immerse yourself in the awe-inspiring beauty and untamed wilderness of the Amazon!"
+}

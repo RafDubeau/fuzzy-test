@@ -1,0 +1,31 @@
+{
+    "productDescription": "Explore the vibrant streets and historic landmarks of Rome on this guided tour.",
+    "productHighlights": [
+        "Visit the Colosseum",
+        "Explore the Vatican City",
+        "Taste authentic Italian cuisine"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Rome",
+        "Day 2: Colosseum tour",
+        "Day 3: Vatican City tour",
+        "Day 4: Food and wine tasting"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Rome, Italy",
+    "productTitle": "Discover Rome",
+    "sourceVideoDescription": "A captivating video showcasing the beauty and culture of Rome.",
+    "videoIntelligenceDescription": "This video provides insights into the history and architecture of Rome.",
+    "videoIntelligenceObjects": {
+        "people": 15,
+        "buildings": 35,
+        "landmarks": 10,
+        "food": 5
+    },
+    "videoTextOnScreen": [
+        "Explore the Eternal City",
+        "Uncover its hidden gems",
+        "Experience the Roman lifestyle"
+    ],
+    "videoTranscript": "Rome, the Eternal City, is known for its rich history and stunning architecture..."
+}

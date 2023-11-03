@@ -1,0 +1,30 @@
+{
+    "productDescription": "Indulge in a luxurious beach getaway on the pristine shores of the Maldives.",
+    "productHighlights": [
+        "Relax on white sandy beaches",
+        "Snorkel in crystal-clear waters",
+        "Enjoy spa treatments"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Male",
+        "Day 2: Beach relaxation",
+        "Day 3: Snorkeling excursion",
+        "Day 4: Spa and wellness"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Maldives",
+    "productTitle": "Paradise in the Maldives",
+    "sourceVideoDescription": "Escape to paradise with this mesmerizing video showcasing the beauty of the Maldives.",
+    "videoIntelligenceDescription": "This video captures the idyllic beaches and underwater wonders of the Maldives.",
+    "videoIntelligenceObjects": {
+        "beaches": 40,
+        "marine life": 30,
+        "spa": 5
+    },
+    "videoTextOnScreen": [
+        "Experience ultimate relaxation",
+        "Discover the underwater world",
+        "Indulge in luxury"
+    ],
+    "videoTranscript": "The Maldives is renowned for its pristine white sandy beaches, turquoise waters, and abundant marine life..."
+}

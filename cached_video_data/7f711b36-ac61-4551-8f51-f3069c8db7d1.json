@@ -1,0 +1,32 @@
+{
+    "productDescription": "Discover the ancient wonders of Egypt",
+    "productHighlights": [
+        "Explore the Great Pyramids of Giza",
+        "Cruise along the Nile River",
+        "Visit the iconic temples of Luxor and Karnak"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Cairo",
+        "Day 2: Explore the Great Pyramids of Giza",
+        "Day 3: Cruise along the Nile River",
+        "Day 4: Visit the temples of Luxor and Karnak",
+        "Day 5: Departure from Cairo"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Egypt",
+    "productTitle": "Egyptian Wonders",
+    "sourceVideoDescription": "Experience the ancient wonders of Egypt",
+    "videoIntelligenceDescription": "This video takes you on a journey to discover the ancient wonders of Egypt, showcasing its iconic pyramids, temples, and the majestic Nile River",
+    "videoIntelligenceObjects": {
+        "duration": 3000,
+        "resolution": 1080,
+        "aspect_ratio": 1.7777777777777777
+    },
+    "videoTextOnScreen": [
+        "Welcome to Egypt!",
+        "Explore the Great Pyramids of Giza",
+        "Cruise along the majestic Nile River",
+        "Visit the iconic temples of Luxor and Karnak"
+    ],
+    "videoTranscript": "Welcome to Egypt! Join us on a journey through time as we explore the ancient wonders of this fascinating country. Discover the iconic Great Pyramids of Giza, cruise along the majestic Nile River, and visit the legendary temples of Luxor and Karnak. Immerse yourself in the rich history and vibrant culture of Egypt!"
+}

@@ -1,0 +1,41 @@
+{
+    "productDescription": "Experience the rich cultural heritage and historical landmarks of Rome, Florence, and Venice on this unforgettable Italy tour. Discover iconic sights, indulge in delicious Italian cuisine, and immerse yourself in art and history.",
+    "productHighlights": [
+        "Exploring Rome's ancient ruins",
+        "Visiting the Vatican City",
+        "Admiring Florence's Renaissance art",
+        "Cruising the canals of Venice",
+        "Tasting authentic Italian cuisine"
+    ],
+    "productItineraryItems": [
+        "Arrival in Rome",
+        "Exploring ancient ruins",
+        "Visiting the Vatican City",
+        "Train to Florence",
+        "Admiring Renaissance art",
+        "Gondola ride in Venice",
+        "Cruising the canals",
+        "Tasting authentic Italian cuisine",
+        "Departure"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Italy",
+    "productTitle": "Cultural Tour of Rome, Florence, and Venice",
+    "sourceVideoDescription": "This video takes you on a journey through the cultural treasures of Italy. Explore ancient ruins in Rome, admire Renaissance art in Florence, and cruise the canals of Venice. Immerse yourself in the rich history and vibrant culture of Italy.",
+    "videoIntelligenceDescription": "The video showcases the ancient ruins of Rome, the Vatican City, the Renaissance art in Florence, the canals of Venice, and the delicious Italian cuisine that can be experienced on this cultural tour.",
+    "videoIntelligenceObjects": {
+        "ruinsRating": 8.9,
+        "vaticanRating": 9.2,
+        "artRating": 9.5,
+        "canalsRating": 9.0,
+        "cuisineRating": 9.3
+    },
+    "videoTextOnScreen": [
+        "Cultural Tour of Rome, Florence, and Venice",
+        "Explore ancient ruins in Rome",
+        "Admire Renaissance art in Florence",
+        "Cruise the canals of Venice",
+        "Taste authentic Italian cuisine"
+    ],
+    "videoTranscript": "Welcome to Italy, a country renowned for its rich cultural heritage and historical landmarks. In this video, we invite you on a cultural tour of Rome, Florence, and Venice. Explore ancient ruins in Rome, visit the Vatican City, admire Renaissance art in Florence, cruise the canals of Venice, and indulge in delicious Italian cuisine. Immerse yourself in the art, history, and vibrant culture of Italy. Book your cultural tour of Rome, Florence, and Venice today!"
+}

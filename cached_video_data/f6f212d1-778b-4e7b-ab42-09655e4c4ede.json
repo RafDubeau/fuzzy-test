@@ -1,0 +1,40 @@
+{
+    "productDescription": "Embark on an adventure-filled safari in the heart of the Serengeti. Witness the annual wildebeest migration, spot the Big Five, and experience the thrill of close encounters with wildlife.",
+    "productHighlights": [
+        "Game drives in the Serengeti",
+        "Witnessing the wildebeest migration",
+        "Spotting the Big Five",
+        "Guided nature walks",
+        "Hot air balloon safari"
+    ],
+    "productItineraryItems": [
+        "Arrival in Arusha",
+        "Transfer to Serengeti National Park",
+        "Game drives in the Serengeti",
+        "Witness the wildebeest migration",
+        "Spotting the Big Five",
+        "Guided nature walks",
+        "Hot air balloon safari",
+        "Departure"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Tanzania",
+    "productTitle": "Safari Adventure in the Serengeti",
+    "sourceVideoDescription": "This video captures the excitement and beauty of a safari adventure in the Serengeti. Witness the wildebeest migration, spot the Big Five, and immerse yourself in the stunning landscapes of Tanzania.",
+    "videoIntelligenceDescription": "The video showcases the thrilling game drives in the Serengeti, the wildebeest migration, the Big Five animals, guided nature walks, and the unique experience of a hot air balloon safari.",
+    "videoIntelligenceObjects": {
+        "gameDriveRating": 9.0,
+        "migrationRating": 9.5,
+        "bigFiveRating": 9.3,
+        "natureWalkRating": 8.8,
+        "balloonSafariRating": 9.2
+    },
+    "videoTextOnScreen": [
+        "Safari Adventure in the Serengeti",
+        "Witness the wildebeest migration",
+        "Spot the Big Five",
+        "Embark on guided nature walks",
+        "Experience a hot air balloon safari"
+    ],
+    "videoTranscript": "Welcome to Tanzania, home to the world-famous Serengeti National Park. In this video, we invite you on a thrilling safari adventure in the heart of the Serengeti. Witness the annual wildebeest migration, spot the Big Five - lions, elephants, rhinos, leopards, and buffalos - and immerse yourself in the stunning landscapes of Tanzania. Join us for game drives, guided nature walks, and a once-in-a-lifetime hot air balloon safari. Book your safari adventure in the Serengeti today!"
+}

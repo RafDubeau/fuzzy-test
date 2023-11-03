@@ -1,0 +1,32 @@
+{
+    "productDescription": "Experience the beauty and tranquility of a tropical beach vacation in Bali.",
+    "productHighlights": [
+        "Relax on pristine white sandy beaches",
+        "Explore ancient temples",
+        "Indulge in delicious local cuisine"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Bali",
+        "Day 2: Visit Tanah Lot Temple",
+        "Day 3: Explore Ubud's rice terraces",
+        "Day 4: Relax on Nusa Dua Beach",
+        "Day 5: Departure from Bali"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Bali, Indonesia",
+    "productTitle": "Tropical Paradise in Bali",
+    "sourceVideoDescription": "This video showcases the stunning beauty of Bali's beaches and the cultural experiences it has to offer.",
+    "videoIntelligenceDescription": "The video highlights the key attractions of Bali, including its beaches, temples, and local cuisine.",
+    "videoIntelligenceObjects": {
+        "beaches": 10,
+        "temples": 5,
+        "local cuisine": 8.5
+    },
+    "videoTextOnScreen": [
+        "Experience the beauty of Bali",
+        "Relax on pristine beaches",
+        "Explore ancient temples",
+        "Indulge in delicious cuisine"
+    ],
+    "videoTranscript": "Bali, a tropical paradise known for its beautiful beaches, ancient temples, and delicious cuisine. Experience the tranquility and cultural richness of this stunning destination."
+}

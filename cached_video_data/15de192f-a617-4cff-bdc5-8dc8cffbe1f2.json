@@ -1,0 +1,32 @@
+{
+    "productDescription": "Experience the vibrant city life and rich history of Tokyo",
+    "productHighlights": [
+        "Explore the bustling streets of Shibuya",
+        "Visit historic temples and shrines",
+        "Indulge in delicious street food"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Tokyo",
+        "Day 2: Explore Shibuya and Harajuku districts",
+        "Day 3: Visit historic temples and shrines",
+        "Day 4: Indulge in delicious street food",
+        "Day 5: Departure from Tokyo"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Tokyo, Japan",
+    "productTitle": "Tokyo City Adventure",
+    "sourceVideoDescription": "Experience the vibrant city life of Tokyo",
+    "videoIntelligenceDescription": "This video captures the vibrant energy and rich history of Tokyo, showcasing its bustling streets, historic temples, and delicious street food",
+    "videoIntelligenceObjects": {
+        "duration": 2400,
+        "resolution": 1080,
+        "aspect_ratio": 1.7777777777777777
+    },
+    "videoTextOnScreen": [
+        "Welcome to Tokyo!",
+        "Explore the bustling streets of Shibuya",
+        "Visit historic temples and shrines",
+        "Indulge in delicious street food"
+    ],
+    "videoTranscript": "Welcome to Tokyo! Get ready to immerse yourself in the vibrant city life and rich history of Japan's capital. Explore the bustling streets of Shibuya, visit historic temples and shrines, and indulge in delicious street food. Experience the unique blend of tradition and modernity that makes Tokyo a truly captivating city!"
+}

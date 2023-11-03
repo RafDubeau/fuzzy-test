@@ -6,10 +6,14 @@ import os
 
 client = weaviate.Client(
     url="https://test-cluster-ljsb7fh8.weaviate.network",  # Replace with your endpoint
-    auth_client_secret=weaviate.AuthApiKey(api_key="CUWrOUtRalQAQxiMfMv6y13TmulH7x0w4Xcd"),  # Replace w/ your Weaviate instance API key
-        additional_headers = {
-        "X-OpenAI-Api-Key": os.environ["OPENAI_API_KEY"]  # Replace with your OpenAI API key
-    }
+    auth_client_secret=weaviate.AuthApiKey(
+        api_key="CUWrOUtRalQAQxiMfMv6y13TmulH7x0w4Xcd"
+    ),  # Replace w/ your Weaviate instance API key
+    additional_headers={
+        "X-OpenAI-Api-Key": os.environ[
+            "OPENAI_API_KEY"
+        ]  # Replace with your OpenAI API key
+    },
 )
 
 
@@ -49,9 +53,14 @@ client = weaviate.Client(
 # ============================= START QUERY DATA =============================
 
 response = (
-    client.query
-    .get("Question", ["question", "answer", "category"])
-    .with_where({"path": "id", "operator": "Equal", "valueString": "028ae72b-f276-4196-aec9-3d5ac1f51cfe"})
+    client.query.get("Question", ["question", "answer", "category"])
+    .with_where(
+        {
+            "path": "id",
+            "operator": "Equal",
+            "valueString": "028ae72b-f276-4196-aec9-3d5ac1f51cfe",
+        }
+    )
     .do()
 )
 
@@ -61,14 +70,15 @@ print(json.dumps(response, indent=4))
 
 
 class WeaviateAPI:
-
     def __init__(self, verbose=False):
         self.client = weaviate.Client(
             url="https://test-cluster-ljsb7fh8.weaviate.network",  # Replace with your endpoint
-            auth_client_secret=weaviate.AuthApiKey(api_key="CUWrOUtRalQAQxiMfMv6y13TmulH7x0w4Xcd"),  # Replace w/ your Weaviate instance API key
-            additional_headers = {
+            auth_client_secret=weaviate.AuthApiKey(
+                api_key="CUWrOUtRalQAQxiMfMv6y13TmulH7x0w4Xcd"
+            ),  # Replace w/ your Weaviate instance API key
+            additional_headers={
                 "X-OpenAI-Api-Key": "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"  # Replace with your OpenAI API key
-            }
+            },
         )
 
         self.field_map = None
@@ -76,21 +86,17 @@ class WeaviateAPI:
 
         self.verbose = verbose
 
-    
     def set_class(self, class_name, field_map):
         self.class_name = class_name
         self.field_map = field_map
 
-    
     def create_class(self, class_obj, field_map):
         self.client.schema.create_class(class_obj)
 
         return WeaviateAPI(class_obj["class"], field_map, verbose=self.verbose)
 
-
     def set_verbose(self, verbose):
         self.verbose = verbose
-    
 
     def import_data(self, data, use_uuid=True, batch_size: int | None = 100):
         """
@@ -103,50 +109,59 @@ class WeaviateAPI:
         """
 
         if self.class_name is None or self.field_map is None:
-            raise ValueError("Class name and field map must be set before importing data.")
-        
-        self._client.batch.configure(batch_size=batch_size)
-        with self._client.batch as batch:
+            raise ValueError(
+                "Class name and field map must be set before importing data."
+            )
+
+        self.client.batch.configure(batch_size=batch_size)
+        with self.client.batch as batch:
             for i, d in enumerate(data):
                 if self.verbose:
                     print(f"importing item: {i+1}")
                 properties = {key: d[value] for key, value in self.field_map.items()}
-                
+
                 # Here, assuming that UUID is based on the `id` field, but this can be customized as needed
                 if use_uuid:
                     batch.add_data_object(
                         uuid=d[self.field_map["id"]],
                         data_object=properties,
-                        class_name=self.class_name
+                        class_name=self.class_name,
                     )
                 batch.add_data_object(
-                    data_object=properties,
-                    class_name=self.class_name
+                    data_object=properties, class_name=self.class_name
                 )
-
 
     async def query_by_uuid(self, uuid: str, fields: list[str]):
         if self.class_name is None or self.field_map is None:
-            raise ValueError("Class name and field map must be set before querying data.")
+            raise ValueError(
+                "Class name and field map must be set before querying data."
+            )
 
         response = await (
-            client.query
-            .get(self.class_name, [self.field_map[field] for field in fields]).with_where({"path": "id", "operator": "Equal", "valueString": uuid})
+            client.query.get(
+                self.class_name, [self.field_map[field] for field in fields]
+            )
+            .with_where({"path": "id", "operator": "Equal", "valueString": uuid})
             .do()
         )
 
         return response
 
-    async def query_by_text(self, text: str | list[str], fields: list[str], limit: int = 10):
+    async def query_by_text(
+        self, text: str | list[str], fields: list[str], limit: int = 10
+    ):
         if self.class_name is None or self.field_map is None:
-            raise ValueError("Class name and field map must be set before querying data.")
+            raise ValueError(
+                "Class name and field map must be set before querying data."
+            )
 
         if isinstance(text, str):
             text = [text]
 
         response = await (
-            client.query
-            .get(self.class_name, [self.field_map[field] for field in fields])
+            client.query.get(
+                self.class_name, [self.field_map[field] for field in fields]
+            )
             .with_near_text({"concepts": text})
             .with_additional(["id"])
             .with_limit(limit)
@@ -158,11 +173,14 @@ class WeaviateAPI:
 
 if __name__ == "__main__":
     weaviate_api = WeaviateAPI(verbose=True)
-    weaviate_api.set_class("Item", {
-        "id": "id",
-        "question": "Question",
-        "answer": "Answer",
-        "category": "Category"
-    })
+    weaviate_api.set_class(
+        "Item",
+        {
+            "id": "id",
+            "question": "Question",
+            "answer": "Answer",
+            "category": "Category",
+        },
+    )
 
-    weaviate_api.query_by_text()
+    weaviate_api.query_by_text("Sup")

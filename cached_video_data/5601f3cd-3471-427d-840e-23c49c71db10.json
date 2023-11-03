@@ -1,0 +1,30 @@
+{
+    "productDescription": "Embark on an unforgettable adventure in the Serengeti National Park.",
+    "productHighlights": [
+        "Witness the Great Migration",
+        "Spot the Big Five",
+        "Camp under the starry sky"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Arusha",
+        "Day 2: Game drive in Serengeti",
+        "Day 3: Hot air balloon safari",
+        "Day 4: Cultural tour"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Serengeti National Park, Tanzania",
+    "productTitle": "Safari in the Serengeti",
+    "sourceVideoDescription": "Experience the beauty and wildlife of the Serengeti through this captivating video.",
+    "videoIntelligenceDescription": "This video showcases the diverse wildlife and stunning landscapes of the Serengeti.",
+    "videoIntelligenceObjects": {
+        "animals": 50,
+        "landscape": 30,
+        "people": 5
+    },
+    "videoTextOnScreen": [
+        "Witness the Great Migration",
+        "Discover the untamed wilderness",
+        "Connect with nature"
+    ],
+    "videoTranscript": "The Serengeti National Park is home to a wide variety of wildlife, including lions, elephants, and zebras..."
+}

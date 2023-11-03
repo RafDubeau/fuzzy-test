@@ -1,0 +1,32 @@
+{
+    "productDescription": "Embark on an epic safari adventure in Serengeti National Park",
+    "productHighlights": [
+        "Witness the great wildebeest migration",
+        "Spot the Big Five on thrilling game drives",
+        "Stay in luxurious tented camps"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Arusha",
+        "Day 2: Game drive in Serengeti National Park",
+        "Day 3: Explore Ngorongoro Crater",
+        "Day 4: Witness the wildebeest migration",
+        "Day 5: Departure from Arusha"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Serengeti National Park, Tanzania",
+    "productTitle": "Serengeti Safari Adventure",
+    "sourceVideoDescription": "Experience the thrill of a safari in Serengeti National Park",
+    "videoIntelligenceDescription": "This video takes you on an immersive safari adventure in Serengeti National Park, showcasing the wildlife and breathtaking landscapes",
+    "videoIntelligenceObjects": {
+        "duration": 4200,
+        "resolution": 1080,
+        "aspect_ratio": 1.7777777777777777
+    },
+    "videoTextOnScreen": [
+        "Welcome to Serengeti National Park!",
+        "Witness the great wildebeest migration",
+        "Spot the Big Five on thrilling game drives",
+        "Stay in luxurious tented camps"
+    ],
+    "videoTranscript": "Welcome to Serengeti National Park! Get ready for an epic safari adventure as we explore the breathtaking landscapes and encounter the incredible wildlife of this iconic national park. Witness the great wildebeest migration, spot the Big Five on thrilling game drives, and stay in luxurious tented camps. Join us on this unforgettable journey through the heart of Africa!"
+}

@@ -1,0 +1,40 @@
+{
+    "productDescription": "Escape to the breathtaking landscapes and vibrant cities of New Zealand on this unforgettable adventure. Explore stunning fjords, hike through national parks, and experience Maori culture.",
+    "productHighlights": [
+        "Cruising Milford Sound",
+        "Hiking in Fiordland National Park",
+        "Visiting Hobbiton",
+        "Exploring Rotorua's geothermal wonders",
+        "Experiencing Maori traditions"
+    ],
+    "productItineraryItems": [
+        "Arrival in Auckland",
+        "Cruising Milford Sound",
+        "Hiking in Fiordland National Park",
+        "Visit to Hobbiton",
+        "Exploring Rotorua's geothermal wonders",
+        "Experiencing Maori traditions",
+        "Departure"
+    ],
+    "productLanguage": "English",
+    "productLocation": "New Zealand",
+    "productTitle": "Adventure in New Zealand's Breathtaking Landscapes",
+    "sourceVideoDescription": "This video showcases the awe-inspiring landscapes and vibrant cities of New Zealand. From the stunning beauty of Milford Sound to the geothermal wonders of Rotorua, embark on an unforgettable adventure in this picturesque country.",
+    "videoIntelligenceDescription": "The video highlights the breathtaking landscapes of New Zealand, including cruising Milford Sound, hiking in Fiordland National Park, visiting Hobbiton, exploring Rotorua's geothermal wonders, and experiencing Maori traditions.",
+    "videoIntelligenceObjects": {
+        "milfordSoundRating": 9.5,
+        "hikingRating": 9.2,
+        "hobbitonRating": 9.0,
+        "geothermalRating": 9.3,
+        "maoriRating": 9.4
+    },
+    "videoTextOnScreen": [
+        "Adventure in New Zealand's Breathtaking Landscapes",
+        "Cruise Milford Sound",
+        "Hike in Fiordland National Park",
+        "Visit Hobbiton",
+        "Explore Rotorua's geothermal wonders",
+        "Experience Maori traditions"
+    ],
+    "videoTranscript": "Welcome to New Zealand, a land of breathtaking landscapes and vibrant cities. In this video, we invite you to embark on an adventure through the stunning beauty of this picturesque country. Cruise Milford Sound, hike through the majestic Fiordland National Park, visit the iconic Hobbiton, explore Rotorua's geothermal wonders, and immerse yourself in the rich traditions of the Maori people. Experience the magic of New Zealand's landscapes today!"
+}

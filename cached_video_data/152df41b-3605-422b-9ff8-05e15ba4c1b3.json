@@ -1,0 +1,31 @@
+{
+    "productDescription": "Experience the vibrant culture and breathtaking landscapes of Japan.",
+    "productHighlights": [
+        "Explore the bustling streets of Tokyo",
+        "Visit historic temples and shrines",
+        "Admire the beauty of cherry blossoms"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Tokyo",
+        "Day 2: Discover the highlights of Tokyo",
+        "Day 3: Explore Kyoto's temples and gardens",
+        "Day 4: Witness cherry blossoms in bloom",
+        "Day 5: Departure from Tokyo"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Japan",
+    "productTitle": "Discover Japan's Rich Heritage",
+    "sourceVideoDescription": "This video showcases the vibrant city life of Tokyo, the cultural gems of Kyoto, and the natural beauty of cherry blossoms in Japan.",
+    "videoIntelligenceDescription": "The video highlights the bustling streets of Tokyo, the serene temples and gardens of Kyoto, and the enchanting beauty of cherry blossoms.",
+    "videoIntelligenceObjects": {
+        "Tokyo": 9,
+        "Kyoto": 8.5,
+        "cherry blossoms": 9
+    },
+    "videoTextOnScreen": [
+        "Explore the vibrant city of Tokyo",
+        "Discover the cultural gems of Kyoto",
+        "Admire the beauty of cherry blossoms"
+    ],
+    "videoTranscript": "Japan, a land of contrasts where ancient traditions blend seamlessly with modernity. Immerse yourself in the vibrant city life of Tokyo, explore the cultural gems of Kyoto, and witness the enchanting beauty of cherry blossoms."
+}

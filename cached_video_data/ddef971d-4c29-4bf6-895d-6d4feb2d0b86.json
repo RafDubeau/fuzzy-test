@@ -1,0 +1,30 @@
+{
+    "productDescription": "Embark on a culinary journey through the streets of Bangkok, tasting authentic Thai flavors.",
+    "productHighlights": [
+        "Visit local markets",
+        "Learn traditional cooking techniques",
+        "Try street food delicacies"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Bangkok",
+        "Day 2: Street food tour",
+        "Day 3: Cooking class",
+        "Day 4: Floating market visit"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Bangkok, Thailand",
+    "productTitle": "Taste of Thailand",
+    "sourceVideoDescription": "Get a taste of the vibrant street food scene in Bangkok with this mouth-watering video.",
+    "videoIntelligenceDescription": "This video showcases the diverse flavors and culinary traditions of Thailand.",
+    "videoIntelligenceObjects": {
+        "food": 40,
+        "markets": 25,
+        "people": 10
+    },
+    "videoTextOnScreen": [
+        "Experience Bangkok's food paradise",
+        "Learn authentic Thai recipes",
+        "Discover hidden culinary gems"
+    ],
+    "videoTranscript": "Bangkok is a paradise for food lovers, with its bustling markets and vibrant street food stalls..."
+}

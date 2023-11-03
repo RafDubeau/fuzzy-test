@@ -1,0 +1,39 @@
+{
+    "productDescription": "Experience the beauty and tranquility of the Maldives with this luxury beach vacation. Relax on pristine white sand beaches, snorkel in crystal clear waters, and indulge in world-class cuisine.",
+    "productHighlights": [
+        "Luxury beach resort",
+        "Snorkeling in coral reefs",
+        "Gourmet dining",
+        "Spa treatments",
+        "Water sports activities"
+    ],
+    "productItineraryItems": [
+        "Arrival and check-in at the resort",
+        "Day at leisure on the beach",
+        "Snorkeling excursion",
+        "Gourmet dinner at a beachfront restaurant",
+        "Spa day",
+        "Water sports activities",
+        "Departure"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Maldives",
+    "productTitle": "Luxury Beach Vacation in the Maldives",
+    "sourceVideoDescription": "This video showcases the stunning beauty of the Maldives, from its pristine beaches to its vibrant coral reefs. Experience the ultimate luxury beach vacation in this tropical paradise.",
+    "videoIntelligenceDescription": "The video highlights the luxury beach resort, snorkeling activities, gourmet dining options, spa treatments, and water sports activities available in the Maldives.",
+    "videoIntelligenceObjects": {
+        "beachResortRating": 9.2,
+        "snorkelingRating": 8.5,
+        "diningRating": 9.0,
+        "spaRating": 9.3,
+        "waterSportsRating": 8.8
+    },
+    "videoTextOnScreen": [
+        "Luxury Beach Vacation in the Maldives",
+        "Experience the ultimate tropical paradise",
+        "Relax on pristine white sand beaches",
+        "Snorkel in crystal clear waters",
+        "Indulge in gourmet dining"
+    ],
+    "videoTranscript": "Welcome to the Maldives, a tropical paradise known for its luxury beach resorts and stunning natural beauty. In this video, we will take you on a journey to experience the ultimate beach vacation in the Maldives. Relax on pristine white sand beaches, snorkel in crystal clear waters, and indulge in gourmet dining. Immerse yourself in the tranquility of this idyllic destination. Book your luxury beach vacation in the Maldives today!"
+}

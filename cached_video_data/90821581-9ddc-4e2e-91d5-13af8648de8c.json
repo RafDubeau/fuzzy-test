@@ -1,0 +1,26 @@
+{
+    "productDescription": "Embark on an exotic journey through the vibrant streets of Marrakech and immerse yourself in its rich culture and traditions.",
+    "productHighlights": [
+        "Explore the bustling souks",
+        "Visit the iconic Jardin Majorelle",
+        "Experience a traditional Moroccan hammam"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Marrakech",
+        "Day 2: Marrakech City Tour",
+        "Day 3: Atlas Mountains Excursion"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Marrakech, Morocco",
+    "productTitle": "Marrakech Discovery",
+    "videoIntelligenceDescription": "This video captures the vibrant atmosphere of Marrakech. From its colorful markets to its stunning gardens, Marrakech offers a sensory overload of sights, sounds, and smells.",
+    "videoIntelligenceObjects": {
+        "markets": 18,
+        "architecture": 10,
+        "food": 6.5
+    },
+    "videoTextOnScreen": [
+        "Experience the wonders of Marrakech",
+        "Immerse yourself in Moroccan culture"
+    ]
+}

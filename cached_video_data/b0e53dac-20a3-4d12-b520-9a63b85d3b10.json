@@ -1,0 +1,30 @@
+{
+    "productDescription": "Experience the magic of the Aurora Borealis on this unforgettable trip to Iceland.",
+    "productHighlights": [
+        "Chase the Northern Lights",
+        "Relax in geothermal hot springs",
+        "Explore Reykjavik"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Reykjavik",
+        "Day 2: Golden Circle tour",
+        "Day 3: Northern Lights excursion",
+        "Day 4: Blue Lagoon visit"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Reykjavik, Iceland",
+    "productTitle": "Aurora Borealis Adventure",
+    "sourceVideoDescription": "Immerse yourself in the beauty of the Northern Lights with this captivating video.",
+    "videoIntelligenceDescription": "This video captures the awe-inspiring phenomenon of the Aurora Borealis in Iceland.",
+    "videoIntelligenceObjects": {
+        "lights": 20,
+        "nature": 40,
+        "hot springs": 5
+    },
+    "videoTextOnScreen": [
+        "Witness the dancing lights",
+        "Discover Iceland's natural wonders",
+        "Indulge in relaxation"
+    ],
+    "videoTranscript": "Iceland is one of the best places to witness the enchanting Northern Lights, also known as the Aurora Borealis..."
+}

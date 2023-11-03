@@ -1,0 +1,31 @@
+{
+    "productDescription": "Embark on a cultural journey through the ancient ruins of Machu Picchu.",
+    "productHighlights": [
+        "Explore the iconic Machu Picchu",
+        "Hike the Inca Trail",
+        "Experience traditional Peruvian cuisine"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Cusco",
+        "Day 2: Explore the Sacred Valley",
+        "Day 3: Hike the Inca Trail to Machu Picchu",
+        "Day 4: Visit Machu Picchu",
+        "Day 5: Departure from Cusco"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Machu Picchu, Peru",
+    "productTitle": "Ancient Wonders of Machu Picchu",
+    "sourceVideoDescription": "This video showcases the awe-inspiring beauty of Machu Picchu and the cultural significance of this ancient Inca city.",
+    "videoIntelligenceDescription": "The video highlights the mystical ruins of Machu Picchu, the challenging Inca Trail, and the delicious Peruvian cuisine.",
+    "videoIntelligenceObjects": {
+        "Machu Picchu": 9.5,
+        "Inca Trail": 8,
+        "Peruvian cuisine": 8.5
+    },
+    "videoTextOnScreen": [
+        "Discover the wonders of Machu Picchu",
+        "Hike the iconic Inca Trail",
+        "Taste traditional Peruvian cuisine"
+    ],
+    "videoTranscript": "Machu Picchu, an ancient marvel nestled in the Peruvian Andes. Embark on a journey to this mystical city, hike the challenging Inca Trail, and savor the flavors of traditional Peruvian cuisine."
+}

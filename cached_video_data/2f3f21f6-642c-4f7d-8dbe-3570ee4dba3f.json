@@ -1,0 +1,40 @@
+{
+    "productDescription": "Discover the vibrant culture and natural wonders of Japan on this immersive journey. From bustling Tokyo to serene temples in Kyoto, experience the beauty and traditions of this fascinating country.",
+    "productHighlights": [
+        "Exploring Tokyo's cityscape",
+        "Visiting ancient temples in Kyoto",
+        "Experiencing traditional tea ceremonies",
+        "Witnessing the beauty of Mount Fuji",
+        "Trying authentic Japanese cuisine"
+    ],
+    "productItineraryItems": [
+        "Arrival in Tokyo",
+        "Exploring the cityscape",
+        "Visit to ancient temples in Kyoto",
+        "Experiencing traditional tea ceremonies",
+        "Witnessing the beauty of Mount Fuji",
+        "Trying authentic Japanese cuisine",
+        "Departure"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Japan",
+    "productTitle": "Cultural Journey through Japan",
+    "sourceVideoDescription": "This video takes you on a cultural journey through Japan, showcasing the vibrant cityscape of Tokyo, the serene temples of Kyoto, the beauty of Mount Fuji, and the unique traditions of this fascinating country.",
+    "videoIntelligenceDescription": "The video showcases the bustling cityscape of Tokyo, the ancient temples of Kyoto, traditional tea ceremonies, the beauty of Mount Fuji, and the delectable Japanese cuisine that can be experienced on this cultural journey.",
+    "videoIntelligenceObjects": {
+        "tokyoRating": 9.3,
+        "kyotoRating": 9.5,
+        "teaCeremoniesRating": 9.0,
+        "mountFujiRating": 9.4,
+        "cuisineRating": 9.2
+    },
+    "videoTextOnScreen": [
+        "Cultural Journey through Japan",
+        "Explore Tokyo's cityscape",
+        "Visit ancient temples in Kyoto",
+        "Experience traditional tea ceremonies",
+        "Witness the beauty of Mount Fuji",
+        "Try authentic Japanese cuisine"
+    ],
+    "videoTranscript": "Welcome to Japan, a country known for its vibrant culture and natural wonders. In this video, we invite you on a cultural journey through bustling Tokyo, serene temples in Kyoto, the beauty of Mount Fuji, and the unique traditions of this fascinating country. Explore the cityscape, visit ancient temples, experience traditional tea ceremonies, witness the beauty of Mount Fuji, and indulge in authentic Japanese cuisine. Immerse yourself in the beauty and traditions of Japan. Book your cultural journey today!"
+}

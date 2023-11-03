@@ -1,0 +1,26 @@
+{
+    "productDescription": "Embark on an unforgettable adventure through the stunning landscapes of Iceland.",
+    "productHighlights": [
+        "Marvel at the majestic waterfalls",
+        "Explore geothermal hot springs",
+        "Spot the elusive Northern Lights"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Reykjavik",
+        "Day 2: Golden Circle Tour",
+        "Day 3: Glacier Hiking"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Reykjavik, Iceland",
+    "productTitle": "Icelandic Wilderness Expedition",
+    "videoIntelligenceDescription": "This video takes you on a journey through the breathtaking landscapes of Iceland. From its glaciers to its volcanoes, Iceland is a paradise for nature lovers.",
+    "videoIntelligenceObjects": {
+        "waterfalls": 15,
+        "mountains": 25,
+        "aurora borealis": 3.5
+    },
+    "videoTextOnScreen": [
+        "Experience the wonders of Iceland",
+        "Discover the untamed beauty of the country"
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "productDescription": "Embark on an unforgettable adventure in the Amazon rainforest.",
+    "productHighlights": [
+        "Discover diverse wildlife",
+        "Explore remote indigenous communities",
+        "Navigate through the lush Amazon River"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Manaus",
+        "Day 2: Explore the Amazon rainforest",
+        "Day 3: Visit indigenous communities",
+        "Day 4: Cruise along the Amazon River",
+        "Day 5: Departure from Manaus"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Amazon Rainforest, Brazil",
+    "productTitle": "Jungle Expedition in the Amazon",
+    "sourceVideoDescription": "This video showcases the stunning biodiversity of the Amazon rainforest and the unique experiences it offers.",
+    "videoIntelligenceDescription": "The video highlights the incredible wildlife, indigenous communities, and the beauty of the Amazon River.",
+    "videoIntelligenceObjects": {
+        "wildlife": 9,
+        "indigenous communities": 8,
+        "Amazon River": 8.5
+    },
+    "videoTextOnScreen": [
+        "Experience the wonders of the Amazon",
+        "Discover diverse wildlife",
+        "Explore indigenous communities",
+        "Cruise along the Amazon River"
+    ],
+    "videoTranscript": "The Amazon rainforest, a treasure trove of biodiversity and cultural heritage. Immerse yourself in the wonders of this natural paradise and discover its unique wildlife, indigenous communities, and the majestic Amazon River."
+}

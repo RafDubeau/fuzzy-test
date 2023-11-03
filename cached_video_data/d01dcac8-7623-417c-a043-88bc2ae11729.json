@@ -1,0 +1,26 @@
+{
+    "productDescription": "Explore the vibrant city of Tokyo and immerse yourself in its rich culture and history.",
+    "productHighlights": [
+        "Visit the iconic Tokyo Tower",
+        "Experience traditional tea ceremonies",
+        "Discover the fascinating Tsukiji Fish Market"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Tokyo",
+        "Day 2: Tokyo City Tour",
+        "Day 3: Visit Tsukiji Fish Market"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Tokyo, Japan",
+    "productTitle": "Tokyo City Experience",
+    "videoIntelligenceDescription": "This video showcases the best things to do and see in Tokyo. From its towering skyscrapers to its tranquil gardens, Tokyo offers a unique blend of modernity and tradition.",
+    "videoIntelligenceObjects": {
+        "people": 10,
+        "buildings": 20,
+        "nature": 5
+    },
+    "videoTextOnScreen": [
+        "Experience the wonders of Tokyo",
+        "Discover the hidden gems of the city"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "productDescription": "Indulge in the rich history and culture of Rome as you explore its ancient ruins and iconic landmarks.",
+    "productHighlights": [
+        "Visit the Colosseum",
+        "Explore the Vatican City",
+        "Throw a coin in the Trevi Fountain"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Rome",
+        "Day 2: Ancient Rome Tour",
+        "Day 3: Vatican City Tour"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Rome, Italy",
+    "productTitle": "Roman Adventure",
+    "videoIntelligenceDescription": "This video showcases the beauty and grandeur of Rome. From its ancient ruins to its Renaissance architecture, Rome is a treasure trove of history and art.",
+    "videoIntelligenceObjects": {
+        "landmarks": 30,
+        "artwork": 12.5,
+        "history": 8
+    },
+    "videoTextOnScreen": [
+        "Experience the wonders of Rome",
+        "Discover the secrets of the Eternal City"
+    ]
+}

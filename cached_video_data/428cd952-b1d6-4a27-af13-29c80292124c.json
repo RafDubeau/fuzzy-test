@@ -1,0 +1,31 @@
+{
+    "productDescription": "Embark on a thrilling safari adventure in the Maasai Mara National Reserve.",
+    "productHighlights": [
+        "Spot the Big Five",
+        "Witness the Great Migration",
+        "Experience Maasai culture"
+    ],
+    "productItineraryItems": [
+        "Day 1: Arrival in Nairobi",
+        "Day 2: Explore Maasai Mara National Reserve",
+        "Day 3: Witness the Great Migration",
+        "Day 4: Visit Maasai villages",
+        "Day 5: Departure from Nairobi"
+    ],
+    "productLanguage": "English",
+    "productLocation": "Maasai Mara National Reserve, Kenya",
+    "productTitle": "Safari Adventure in Maasai Mara",
+    "sourceVideoDescription": "This video showcases the incredible wildlife of Maasai Mara and the cultural traditions of the Maasai people.",
+    "videoIntelligenceDescription": "The video highlights the majestic Big Five, the awe-inspiring Great Migration, and the rich Maasai culture.",
+    "videoIntelligenceObjects": {
+        "Big Five": 9.5,
+        "Great Migration": 9,
+        "Maasai culture": 8.5
+    },
+    "videoTextOnScreen": [
+        "Embark on a thrilling safari adventure",
+        "Spot the majestic Big Five",
+        "Witness the awe-inspiring Great Migration"
+    ],
+    "videoTranscript": "Maasai Mara, a wildlife haven where you can witness the majestic Big Five and the awe-inspiring Great Migration. Immerse yourself in the rich culture of the Maasai people and experience the thrill of a safari adventure."
+}
