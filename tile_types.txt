@@ -1,0 +1,2378 @@
+# Automatically generated file from a JSON schema
+
+
+from typing import List, Literal, Required, TypedDict, Union
+
+Tile = Union[
+    "_TimelineCarRental",
+    "_TimelineDining",
+    "_TimelineSuggestions",
+    "_TimelineFlight",
+    "_TimelineGoods",
+    "_TimelineHeader",
+    "_TimelineLink",
+    "_TimelineMockTiles",
+    "_TimelineLodging",
+    "_TimelineLodgingCheckIn",
+    "_TimelineLodgingCheckout",
+    "_TimelineProduct",
+    "_TimelineTransportation",
+    "_TimelineMedia",
+    "_TimelineSticker",
+]
+"""
+The set of all possible tile types, discriminated based on the ```type``` field.
+
+Aggregation type: anyOf
+"""
+
+
+class _TimelineCarRental(TypedDict, total=False):
+    """A tile representing a car rental pickup or drop off"""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    company: Required[str]
+    """
+    The name of the rental company
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    eventType: Required["_TimelineCarRentalEventtype"]
+    """
+    Whether the entry represents a pick up or a drop off
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    location: Required[str]
+    """
+    The location of the car pickup
+
+    Required property
+    """
+
+    makeAndModel: str
+    """ The make and model of the car """
+
+    maxTravelers: Union[int, float]
+    """ The maximum number of travelers in the car """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    reservationName: str
+    """ The name of the person on the reservation """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["car-rental"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineCarRentalVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineCarRentalEventtype = Union[Literal["pickup"], Literal["drop-off"]]
+""" Whether the entry represents a pick up or a drop off """
+_TIMELINECARRENTALEVENTTYPE_PICKUP: Literal["pickup"] = "pickup"
+"""The values for the 'Whether the entry represents a pick up or a drop off' enum"""
+_TIMELINECARRENTALEVENTTYPE_DROP_OFF: Literal["drop-off"] = "drop-off"
+"""The values for the 'Whether the entry represents a pick up or a drop off' enum"""
+
+
+class _TimelineCarRentalVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineCarRentalVotesItemValue"]
+    """ Required property """
+
+
+_TimelineCarRentalVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINECARRENTALVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineCarRentalVotesItemValue' enum"""
+_TIMELINECARRENTALVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineCarRentalVotesItemValue' enum"""
+
+
+class _TimelineDining(TypedDict, total=False):
+    """A tile representing a meal at a restaurant"""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    description: str
+    """ A description of the restaurant from the affiliate """
+
+    endDate: Required[Union[int, float]]
+    """
+    The end date of a tile. The corresponding start date is `date`.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    location: Required[str]
+    """
+    The location of the restaurant
+
+    Required property
+    """
+
+    meal: Required["_TimelineDiningMeal"]
+    """
+    The meal that the tile represents
+
+    Required property
+    """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    priceRange: "_TimelineDiningPricerange"
+    """ How pricy the restaurant is """
+
+    reservationName: str
+    """ The name of the person on the reservation """
+
+    restaurant: Required[str]
+    """
+    The name of the restaurant
+
+    Required property
+    """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["dining"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineDiningVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineDiningMeal = Union[
+    Literal["breakfast"],
+    Literal["lunch"],
+    Literal["dinner"],
+    Literal["drinks"],
+    Literal["snack"],
+    Literal["brunch"],
+    Literal["happy hour"],
+    Literal["other"],
+]
+""" The meal that the tile represents """
+_TIMELINEDININGMEAL_BREAKFAST: Literal["breakfast"] = "breakfast"
+"""The values for the 'The meal that the tile represents' enum"""
+_TIMELINEDININGMEAL_LUNCH: Literal["lunch"] = "lunch"
+"""The values for the 'The meal that the tile represents' enum"""
+_TIMELINEDININGMEAL_DINNER: Literal["dinner"] = "dinner"
+"""The values for the 'The meal that the tile represents' enum"""
+_TIMELINEDININGMEAL_DRINKS: Literal["drinks"] = "drinks"
+"""The values for the 'The meal that the tile represents' enum"""
+_TIMELINEDININGMEAL_SNACK: Literal["snack"] = "snack"
+"""The values for the 'The meal that the tile represents' enum"""
+_TIMELINEDININGMEAL_BRUNCH: Literal["brunch"] = "brunch"
+"""The values for the 'The meal that the tile represents' enum"""
+_TIMELINEDININGMEAL_HAPPY_HOUR: Literal["happy hour"] = "happy hour"
+"""The values for the 'The meal that the tile represents' enum"""
+_TIMELINEDININGMEAL_OTHER: Literal["other"] = "other"
+"""The values for the 'The meal that the tile represents' enum"""
+
+
+_TimelineDiningPricerange = Union[Literal["$"], Literal["$$"], Literal["$$$"]]
+""" How pricy the restaurant is """
+_TIMELINEDININGPRICERANGE__: Literal["$"] = "$"
+"""The values for the 'How pricy the restaurant is' enum"""
+_TIMELINEDININGPRICERANGE___: Literal["$$"] = "$$"
+"""The values for the 'How pricy the restaurant is' enum"""
+_TIMELINEDININGPRICERANGE____: Literal["$$$"] = "$$$"
+"""The values for the 'How pricy the restaurant is' enum"""
+
+
+class _TimelineDiningVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineDiningVotesItemValue"]
+    """ Required property """
+
+
+_TimelineDiningVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINEDININGVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineDiningVotesItemValue' enum"""
+_TIMELINEDININGVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineDiningVotesItemValue' enum"""
+
+
+class _TimelineFlight(TypedDict, total=False):
+    """A tile representing air travel."""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    airline: Required[str]
+    """
+    The name of the airline
+
+    Required property
+    """
+
+    arrivalAirportCode: Required[str]
+    """
+    The code of the arrival airport (i.e. MSP, JFK, etc.)
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    confirmationNumber: str
+    """ The confirmation number of the purchased tickets. """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    currency: str
+    """ The currency of the flight price """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    departureAirportCode: Required[str]
+    """
+    The code of the departure airport (i.e. MSP, JFK, etc.)
+
+    Required property
+    """
+
+    endDate: Required[Union[int, float]]
+    """
+    The end date of a tile. The corresponding start date is `date`.
+
+    Required property
+    """
+
+    flightNo: Required[str]
+    """
+    The flight number of the flight
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    price: Union[int, float]
+    """ The price of the flight """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["flight"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineFlightVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+class _TimelineFlightVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineFlightVotesItemValue"]
+    """ Required property """
+
+
+_TimelineFlightVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINEFLIGHTVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineFlightVotesItemValue' enum"""
+_TIMELINEFLIGHTVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineFlightVotesItemValue' enum"""
+
+
+class _TimelineGoods(TypedDict, total=False):
+    """NOT updated. Needs to be reviewed."""
+
+    adminIds: List[str]
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    description: Required[str]
+    """ Required property """
+
+    id: Required[str]
+    """ Required property """
+
+    imageURI: Required[str]
+    """ Required property """
+
+    images: List[str]
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    name: Required[str]
+    """ Required property """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    price: Required[Union[int, float]]
+    """ Required property """
+
+    purchased: Required[bool]
+    """ Required property """
+
+    sku: Required[str]
+    """ Required property """
+
+    state: "_TimelineGoodsState"
+    status: Required["_TimelineGoodsStatus"]
+    """ Required property """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    title: Required[str]
+    """ Required property """
+
+    type: Required[Literal["goods"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    variantId: Required[str]
+    """ Required property """
+
+    votes: Required[List["_TimelineGoodsVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineGoodsState = Union[
+    Literal["pending"], Literal["active"], Literal["approved"], Literal["drafting"]
+]
+_TIMELINEGOODSSTATE_PENDING: Literal["pending"] = "pending"
+"""The values for the '_TimelineGoodsState' enum"""
+_TIMELINEGOODSSTATE_ACTIVE: Literal["active"] = "active"
+"""The values for the '_TimelineGoodsState' enum"""
+_TIMELINEGOODSSTATE_APPROVED: Literal["approved"] = "approved"
+"""The values for the '_TimelineGoodsState' enum"""
+_TIMELINEGOODSSTATE_DRAFTING: Literal["drafting"] = "drafting"
+"""The values for the '_TimelineGoodsState' enum"""
+
+
+_TimelineGoodsStatus = Union[Literal["active"], Literal["archived"], Literal["draft"]]
+_TIMELINEGOODSSTATUS_ACTIVE: Literal["active"] = "active"
+"""The values for the '_TimelineGoodsStatus' enum"""
+_TIMELINEGOODSSTATUS_ARCHIVED: Literal["archived"] = "archived"
+"""The values for the '_TimelineGoodsStatus' enum"""
+_TIMELINEGOODSSTATUS_DRAFT: Literal["draft"] = "draft"
+"""The values for the '_TimelineGoodsStatus' enum"""
+
+
+class _TimelineGoodsVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineGoodsVotesItemValue"]
+    """ Required property """
+
+
+_TimelineGoodsVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINEGOODSVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineGoodsVotesItemValue' enum"""
+_TIMELINEGOODSVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineGoodsVotesItemValue' enum"""
+
+
+class _TimelineHeader(TypedDict, total=False):
+    """A user generated custom header denoting and labeling a new user-defined portion of the trip."""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    subtitle: str
+    """ A smaller secondary bit of text displayed in the header. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    title: Required[str]
+    """
+    The title of a header. The main bit of text displayed.
+
+    Required property
+    """
+
+    type: Required[Literal["header"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineHeaderVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+class _TimelineHeaderVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineHeaderVotesItemValue"]
+    """ Required property """
+
+
+_TimelineHeaderVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINEHEADERVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineHeaderVotesItemValue' enum"""
+_TIMELINEHEADERVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineHeaderVotesItemValue' enum"""
+
+
+class _TimelineLink(TypedDict, total=False):
+    """A link to an external resource"""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    favicon: Required[str]
+    """
+    The favicon of the page.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    imageUrl: str
+    """ An image from the page identified by an OG protocol tag (https://ogp.me/) """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    pageDescription: str
+    """ The description of the page that we scrape from the pages ```<meta />``` tag """
+
+    pageTitle: Required[str]
+    """
+    The title of the page that we obtain by scraping the site
+
+    Required property
+    """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["link"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    url: Required[str]
+    """
+    The URL to the external resource
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineLinkVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    websiteName: Required[str]
+    """
+    The name of the website that we scrape from the pages
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+class _TimelineLinkVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineLinkVotesItemValue"]
+    """ Required property """
+
+
+_TimelineLinkVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINELINKVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineLinkVotesItemValue' enum"""
+_TIMELINELINKVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineLinkVotesItemValue' enum"""
+
+
+class _TimelineLodging(TypedDict, total=False):
+    """A hotel, airbnb, rental etc."""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    checkInDate: Required[Union[int, float]]
+    """
+    The date/time of the check in. Different from `date` and `endDate`, because that refers to this night's stay at the hotel
+
+    Required property
+    """
+
+    checkOutDate: Required[Union[int, float]]
+    """
+    The date/time of the check out. Different from `date` and `endDate`, because that refers to this night's stay at the hotel
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    endDate: Required[Union[int, float]]
+    """
+    The end date of a tile. The corresponding start date is `date`.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    location: Required[str]
+    """
+    The location of the lodging establishment
+
+    Required property
+    """
+
+    lodgingType: Required["_TimelineLodgingLodgingtype"]
+    """
+    The type of lodging accommodation
+
+    Required property
+    """
+
+    name: Required[str]
+    """
+    the name of the lodging establishment (hotel name, airbnb, etc.)
+
+    Required property
+    """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["lodging"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineLodgingVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+class _TimelineLodgingCheckIn(TypedDict, total=False):
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    location: Required[str]
+    """
+    The location of the lodging establishment
+
+    Required property
+    """
+
+    lodgingType: Required["_TimelineLodgingCheckInLodgingtype"]
+    """
+    The type of lodging accommodation
+
+    Required property
+    """
+
+    name: Required[str]
+    """
+    the name of the lodging establishment (hotel name, airbnb, etc.)
+
+    Required property
+    """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["lodging-check-in"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineLodgingCheckInVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineLodgingCheckInLodgingtype = Union[
+    Literal["hotel"],
+    Literal["hostel"],
+    Literal["rental"],
+    Literal["private"],
+    Literal["other"],
+]
+""" The type of lodging accommodation """
+_TIMELINELODGINGCHECKINLODGINGTYPE_HOTEL: Literal["hotel"] = "hotel"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKINLODGINGTYPE_HOSTEL: Literal["hostel"] = "hostel"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKINLODGINGTYPE_RENTAL: Literal["rental"] = "rental"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKINLODGINGTYPE_PRIVATE: Literal["private"] = "private"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKINLODGINGTYPE_OTHER: Literal["other"] = "other"
+"""The values for the 'The type of lodging accommodation' enum"""
+
+
+class _TimelineLodgingCheckInVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineLodgingCheckInVotesItemValue"]
+    """ Required property """
+
+
+_TimelineLodgingCheckInVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINELODGINGCHECKINVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineLodgingCheckInVotesItemValue' enum"""
+_TIMELINELODGINGCHECKINVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineLodgingCheckInVotesItemValue' enum"""
+
+
+class _TimelineLodgingCheckout(TypedDict, total=False):
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    location: Required[str]
+    """
+    The location of the lodging establishment
+
+    Required property
+    """
+
+    lodgingType: Required["_TimelineLodgingCheckoutLodgingtype"]
+    """
+    The type of lodging accommodation
+
+    Required property
+    """
+
+    name: Required[str]
+    """
+    the name of the lodging establishment (hotel name, airbnb, etc.)
+
+    Required property
+    """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["lodging-checkout"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineLodgingCheckoutVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineLodgingCheckoutLodgingtype = Union[
+    Literal["hotel"],
+    Literal["hostel"],
+    Literal["rental"],
+    Literal["private"],
+    Literal["other"],
+]
+""" The type of lodging accommodation """
+_TIMELINELODGINGCHECKOUTLODGINGTYPE_HOTEL: Literal["hotel"] = "hotel"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKOUTLODGINGTYPE_HOSTEL: Literal["hostel"] = "hostel"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKOUTLODGINGTYPE_RENTAL: Literal["rental"] = "rental"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKOUTLODGINGTYPE_PRIVATE: Literal["private"] = "private"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGCHECKOUTLODGINGTYPE_OTHER: Literal["other"] = "other"
+"""The values for the 'The type of lodging accommodation' enum"""
+
+
+class _TimelineLodgingCheckoutVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineLodgingCheckoutVotesItemValue"]
+    """ Required property """
+
+
+_TimelineLodgingCheckoutVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINELODGINGCHECKOUTVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineLodgingCheckoutVotesItemValue' enum"""
+_TIMELINELODGINGCHECKOUTVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineLodgingCheckoutVotesItemValue' enum"""
+
+
+_TimelineLodgingLodgingtype = Union[
+    Literal["hotel"],
+    Literal["hostel"],
+    Literal["rental"],
+    Literal["private"],
+    Literal["other"],
+]
+""" The type of lodging accommodation """
+_TIMELINELODGINGLODGINGTYPE_HOTEL: Literal["hotel"] = "hotel"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGLODGINGTYPE_HOSTEL: Literal["hostel"] = "hostel"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGLODGINGTYPE_RENTAL: Literal["rental"] = "rental"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGLODGINGTYPE_PRIVATE: Literal["private"] = "private"
+"""The values for the 'The type of lodging accommodation' enum"""
+_TIMELINELODGINGLODGINGTYPE_OTHER: Literal["other"] = "other"
+"""The values for the 'The type of lodging accommodation' enum"""
+
+
+class _TimelineLodgingVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineLodgingVotesItemValue"]
+    """ Required property """
+
+
+_TimelineLodgingVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINELODGINGVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineLodgingVotesItemValue' enum"""
+_TIMELINELODGINGVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineLodgingVotesItemValue' enum"""
+
+
+class _TimelineMedia(TypedDict, total=False):
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    mediaType: Required["_TimelineMediaMediatype"]
+    """ Required property """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["media"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    uri: Required[str]
+    """ Required property """
+
+    votes: Required[List["_TimelineMediaVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineMediaMediatype = Union[Literal["video"], Literal["image"]]
+_TIMELINEMEDIAMEDIATYPE_VIDEO: Literal["video"] = "video"
+"""The values for the '_TimelineMediaMediatype' enum"""
+_TIMELINEMEDIAMEDIATYPE_IMAGE: Literal["image"] = "image"
+"""The values for the '_TimelineMediaMediatype' enum"""
+
+
+class _TimelineMediaVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineMediaVotesItemValue"]
+    """ Required property """
+
+
+_TimelineMediaVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINEMEDIAVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineMediaVotesItemValue' enum"""
+_TIMELINEMEDIAVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineMediaVotesItemValue' enum"""
+
+
+class _TimelineMockTiles(TypedDict, total=False):
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    suggestedType: Required["_TimelineMockTilesSuggestedtype"]
+    """ Required property """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    title: Required[str]
+    """ Required property """
+
+    type: Required[Literal["empty"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineMockTilesVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineMockTilesSuggestedtype = Union[
+    Literal["car-rental"],
+    Literal["dining"],
+    Literal["tileSuggestion"],
+    Literal["flight"],
+    Literal["goods"],
+    Literal["header"],
+    Literal["link"],
+    Literal["lodging"],
+    Literal["lodging-check-in"],
+    Literal["lodging-checkout"],
+    Literal["product"],
+    Literal["transportation"],
+    Literal["media"],
+    Literal["sticker"],
+]
+_TIMELINEMOCKTILESSUGGESTEDTYPE_CAR_RENTAL: Literal["car-rental"] = "car-rental"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_DINING: Literal["dining"] = "dining"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_TILESUGGESTION: Literal[
+    "tileSuggestion"
+] = "tileSuggestion"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_FLIGHT: Literal["flight"] = "flight"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_GOODS: Literal["goods"] = "goods"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_HEADER: Literal["header"] = "header"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_LINK: Literal["link"] = "link"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_LODGING: Literal["lodging"] = "lodging"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_LODGING_CHECK_IN: Literal[
+    "lodging-check-in"
+] = "lodging-check-in"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_LODGING_CHECKOUT: Literal[
+    "lodging-checkout"
+] = "lodging-checkout"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_PRODUCT: Literal["product"] = "product"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_TRANSPORTATION: Literal[
+    "transportation"
+] = "transportation"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_MEDIA: Literal["media"] = "media"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+_TIMELINEMOCKTILESSUGGESTEDTYPE_STICKER: Literal["sticker"] = "sticker"
+"""The values for the '_TimelineMockTilesSuggestedtype' enum"""
+
+
+class _TimelineMockTilesVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineMockTilesVotesItemValue"]
+    """ Required property """
+
+
+_TimelineMockTilesVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINEMOCKTILESVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineMockTilesVotesItemValue' enum"""
+_TIMELINEMOCKTILESVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineMockTilesVotesItemValue' enum"""
+
+
+class _TimelineProduct(TypedDict, total=False):
+    """A product in its timeline display format."""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    dropOffLocationName: str
+    """ The name of the drop off location. """
+
+    endDate: Required[Union[int, float]]
+    """
+    The end date of a tile. The corresponding start date is `date`.
+
+    Required property
+    """
+
+    experienceVideoIds: Required[List[str]]
+    """
+    Experience Videos
+
+    Required property
+    """
+
+    id: Required[str]
+    """
+    The Fuzzy.Day–unique ID of the product. These are not mapped to the ID/product code/SKU in our affiliates databases. For that, see `sourceAffiliate.affiliateProductId`.
+
+    Required property
+    """
+
+    images: Required[List[str]]
+    """
+    The list of images from the affiliate.
+
+    Required property
+    """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    location: Required[str]
+    """
+    The name of the location.
+
+    Required property
+    """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    pickUpLocationName: str
+    """ The name of the pick up location. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    title: Required[str]
+    """
+    The name of the product.
+
+    Required property
+    """
+
+    type: Required[Literal["product"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineProductVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+class _TimelineProductVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineProductVotesItemValue"]
+    """ Required property """
+
+
+_TimelineProductVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINEPRODUCTVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineProductVotesItemValue' enum"""
+_TIMELINEPRODUCTVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineProductVotesItemValue' enum"""
+
+
+class _TimelineSticker(TypedDict, total=False):
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    timelineXPosition: Required[Union[int, float]]
+    """ Required property """
+
+    timelineYPosition: Required[Union[int, float]]
+    """ Required property """
+
+    type: Required[Literal["sticker"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineStickerVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+class _TimelineStickerVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineStickerVotesItemValue"]
+    """ Required property """
+
+
+_TimelineStickerVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINESTICKERVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineStickerVotesItemValue' enum"""
+_TIMELINESTICKERVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineStickerVotesItemValue' enum"""
+
+
+class _TimelineSuggestions(TypedDict, total=False):
+    """This is for suggestion that will be placed on the timeline"""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    description: Required[str]
+    """
+    The AI generated suggestion
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    type: Required[Literal["tileSuggestion"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineSuggestionsVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+class _TimelineSuggestionsVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineSuggestionsVotesItemValue"]
+    """ Required property """
+
+
+_TimelineSuggestionsVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINESUGGESTIONSVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineSuggestionsVotesItemValue' enum"""
+_TIMELINESUGGESTIONSVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineSuggestionsVotesItemValue' enum"""
+
+
+class _TimelineTransportation(TypedDict, total=False):
+    """A tile representing transportation"""
+
+    aiSuggestions: Required[str]
+    """
+    AI Suggestions text
+
+    Required property
+    """
+
+    aiSuggestionsId: Required[str]
+    """
+    AI Suggestions id
+
+    Required property
+    """
+
+    aiSuggestionsType: Required[str]
+    """
+    AI Suggestions type: used to delineate type of suggestion: i.e., "base" and "conflict"
+
+    Required property
+    """
+
+    aiTextDescription: Required[str]
+    """
+    A text-based representation of an object to hand to AI, while optimizing token counts.
+
+    Required property
+    """
+
+    arrivalLocation: Required[str]
+    """
+    The location of the arrival
+
+    Required property
+    """
+
+    attendees: Required[List[str]]
+    """
+    A list of users that have marked themselves as "going".
+
+    Required property
+    """
+
+    confirmationNumber: str
+    """ The confirmation number of the purchased tickets """
+
+    createdAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was added to the timeline.
+
+    Required property
+    """
+
+    createdById: Required[str]
+    """
+    The ID of the user that added the tile to the Wishtrip.
+
+    Required property
+    """
+
+    date: Required[Union[int, float]]
+    """
+    The date of a tile. If the tile also should have an end date, union its definition with EventCommonProps instead, which also contains an `endDate` field.
+
+    Required property
+    """
+
+    departureLocation: Required[str]
+    """
+    The location of the departure
+
+    Required property
+    """
+
+    endDate: Required[Union[int, float]]
+    """
+    The end date of a tile. The corresponding start date is `date`.
+
+    Required property
+    """
+
+    id: Required[str]
+    """ Required property """
+
+    likes: Required[List[str]]
+    """
+    A list of users that have liked a timeline in a wishtrip.
+
+    Required property
+    """
+
+    link: str
+    """ A link to follow to purchase the product """
+
+    maxTravelers: Union[int, float]
+    """ The maximum number of travelers that the mode of transportation can accommodate """
+
+    notes: str
+    """ User-written notes about a tile. """
+
+    tileGroupId: str
+    """ An id uniting different related tiles on a timeline. For example, check-in, check out, and spending a night at a hotel all will be tiles on a timeline, but are related, and should be deleted and updated together. """
+
+    transportationType: Required["_TimelineTransportationTransportationtype"]
+    """
+    The method of transportation
+
+    Required property
+    """
+
+    type: Required[Literal["transportation"]]
+    """ Required property """
+
+    updatedAt: Required[Union[int, float]]
+    """
+    The timestamp that the item was updated on the timeline.
+
+    Required property
+    """
+
+    votes: Required[List["_TimelineTransportationVotesItem"]]
+    """
+    A list of votes on a particular tile
+
+    Required property
+    """
+
+    wishtripId: Required[str]
+    """
+    The ID of the wishtrip that this tile is apart of.
+
+    Required property
+    """
+
+
+_TimelineTransportationTransportationtype = Union[
+    Literal["train"],
+    Literal["bus"],
+    Literal["boat"],
+    Literal["taxi"],
+    Literal["ride-share"],
+    Literal["private"],
+    Literal["other"],
+]
+""" The method of transportation """
+_TIMELINETRANSPORTATIONTRANSPORTATIONTYPE_TRAIN: Literal["train"] = "train"
+"""The values for the 'The method of transportation' enum"""
+_TIMELINETRANSPORTATIONTRANSPORTATIONTYPE_BUS: Literal["bus"] = "bus"
+"""The values for the 'The method of transportation' enum"""
+_TIMELINETRANSPORTATIONTRANSPORTATIONTYPE_BOAT: Literal["boat"] = "boat"
+"""The values for the 'The method of transportation' enum"""
+_TIMELINETRANSPORTATIONTRANSPORTATIONTYPE_TAXI: Literal["taxi"] = "taxi"
+"""The values for the 'The method of transportation' enum"""
+_TIMELINETRANSPORTATIONTRANSPORTATIONTYPE_RIDE_SHARE: Literal[
+    "ride-share"
+] = "ride-share"
+"""The values for the 'The method of transportation' enum"""
+_TIMELINETRANSPORTATIONTRANSPORTATIONTYPE_PRIVATE: Literal["private"] = "private"
+"""The values for the 'The method of transportation' enum"""
+_TIMELINETRANSPORTATIONTRANSPORTATIONTYPE_OTHER: Literal["other"] = "other"
+"""The values for the 'The method of transportation' enum"""
+
+
+class _TimelineTransportationVotesItem(TypedDict, total=False):
+    userId: Required[str]
+    """ Required property """
+
+    value: Required["_TimelineTransportationVotesItemValue"]
+    """ Required property """
+
+
+_TimelineTransportationVotesItemValue = Union[Literal["yes"], Literal["no"]]
+_TIMELINETRANSPORTATIONVOTESITEMVALUE_YES: Literal["yes"] = "yes"
+"""The values for the '_TimelineTransportationVotesItemValue' enum"""
+_TIMELINETRANSPORTATIONVOTESITEMVALUE_NO: Literal["no"] = "no"
+"""The values for the '_TimelineTransportationVotesItemValue' enum"""

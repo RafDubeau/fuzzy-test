@@ -362,9 +362,9 @@ def hybrid_main():
     # post("full_train_cf")
 
     # Get recommendations
-    recommendations = get(
-        "get_recommendations", user_id=kyle_id, num_recommendations=20
-    )
+    # recommendations = get(
+    #     "get_recommendations", user_id=kyle_id, num_recommendations=20
+    # )
 
     # for rec in recommendations:
     #     if rec not in id_list:
@@ -383,8 +383,107 @@ def bookmark_test():
     )
 
 
+def backend_recommendation_test():
+    kyle_id = "kPtLzCNeMLNvSLutIzehnQIl7mf1"
+    truman_id = "KOyDDN84tvTZzwzqFRM0pdz2BlD3"
+    get("get_weaviate_id_list", verbose=True)
+    post("sync_weaviate", verbose=True)
+    get("get_weaviate_id_list", verbose=True)
+
+    # post("clear_cf_files")
+
+    ## Initialize the affiliation coefficients
+    # post(
+    #     "set_affiliation_coefficients",
+    #     affiliation_coefficients={
+    #         "bookmarked": 0.85,
+    #         "unbookmarked": 0.85,
+    #         "watched": 0.3,
+    #         "shared": 0.75,
+    #         "liked": 1,
+    #         "unliked": 1,
+    #         "viewed-product": 0.85,
+    #         "added-to-timeline": 1,
+    #         "shared-timeline": 0.75,
+    #         "scrolled-details": 0.5,
+    #         "scrolled-images": 0.5,
+    #         "added-comment": 0.4,
+    #         "sent-message": 0.4,
+    #         "bought-product": 2,
+    #         "opened-app": 0,
+    #         "closed-app": 0,
+    #     },
+    # )
+
+    ## Train collaborative filtering model
+    # post("full_train_cf")
+
+    ## Request recommendations
+
+    # post(
+    #     "add_interaction_event",
+    #     interactionType="opened-app",
+    #     userId=kyle_id,
+    #     referenceType="None",
+    #     referenceId="",
+    #     routerPath="test",
+    #     value=1,
+    # )
+
+    # for recommended_id in [
+    #     "7a41a81c-fdda-4fcb-aac7-65bd93f99992",
+    #     "539809c0-7b8e-46e2-8152-406cb94594cf",
+    #     "b9b2431c-f83b-4e2b-ae4a-8ed3de76b4a8",
+    #     "b1eee97d-2228-4e53-887b-e6124f397b13",
+    #     "2b3648ee-3b77-4ac2-ba94-3202c8b946a8",
+    #     "34334800-915c-4200-bfa2-6ce6513cfdd8",
+    #     "c91ea4ec-635e-424d-acde-de1ad13448a4",
+    # ]:
+    #     post(
+    #         "add_interaction_event",
+    #         interactionType="watched",
+    #         userId=kyle_id,
+    #         referenceType="RecommendedExperienceVideo",
+    #         referenceId=recommended_id,
+    #         routerPath="test",
+    #         value=1,
+    #     )
+
+    # post("simulate_scrolling", user_id=kyle_id, num_watched=8)
+
+    # post(
+    #     "add_interaction_event",
+    #     interactionType="closed-app",
+    #     userId=kyle_id,
+    #     referenceType="None",
+    #     referenceId="",
+    #     routerPath="test",
+    #     value=1,
+    # )
+
+
+def generate_trending():
+    post("request_new_trending_videos")
+
+
+def suggestion_test(
+    user_id: str = "kPtLzCNeMLNvSLutIzehnQIl7mf1",
+    wishtrip_id: str = "7c691c25-659c-4c5f-b417-ab7feec9b4c8",
+):
+    # post("clear_wishtrip_items", wishtrip_id=wishtrip_id)
+
+    post("add_sample_wishtrip", user_id=user_id, wishtrip_id=wishtrip_id)
+
+    # post("clear_wishtrip_suggestions", wishtrip_id=wishtrip_id)
+
+    # post(
+    #     "add_wishtrip_suggestions",
+    #     wishtrip_id=wishtrip_id,
+    # )
+
+
 if __name__ == "__main__":
-    hybrid_main()
+    suggestion_test()
 
 
 """

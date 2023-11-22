@@ -150,17 +150,21 @@ def should_unpack_validator(func: Callable[..., Any], validator: Callable[..., A
 
 
 def should_unpack_kwargs(func: Callable[..., Any], kwargs: Dict[str, Any]):
-    parameters = {param.name for param in inspect.signature(func).parameters.values()}
+    parameters = inspect.signature(func).parameters.values()
 
     if len(parameters) == 1 and len(kwargs) > 1:
         return False
 
-    matching_keys = parameters.intersection(kwargs.keys())
-    if len(matching_keys) == len(parameters):
+    required_params = {
+        param.name for param in parameters if param.default is inspect.Parameter.empty
+    }
+
+    matching_keys = required_params.intersection(kwargs.keys())
+    if len(matching_keys) == len(required_params):
         return True
     else:
         raise ValueError(
-            f"Number of function parameters: {len(parameters)} does not match number of values in kwargs: {len(kwargs)}."
+            f"Number of required function parameters: {len(required_params)} does not match number of values in kwargs: {len(kwargs)}."
         )
 
 
@@ -193,15 +197,22 @@ if __name__ == "__main__":
 
     class A(TypedDict):
         name: "_OnionType"
+        age: int
+
+    class B(TypedDict):
+        name: "_OnionType"
+        age: int
+        height: float
 
     _OnionType = Union[str, List[str]]
 
-    def validateA(data) -> A:
-        return data
+    B_data: B = {
+        "name": "John",
+        "age": 42,
+        "height": 5.8,
+    }
 
-    def func(name: str | list[str]) -> int:
-        if isinstance(name, str):
-            name = [name]
-        return sum(len(n) for n in name)
+    A_data: A = {key: B_data[key] for key in get_type_hints(A).keys()}
 
-    print_bool(is_subtype_of(int | float, Optional[int | float | str]))
+    print(type(A_data))
+    print(A_data)

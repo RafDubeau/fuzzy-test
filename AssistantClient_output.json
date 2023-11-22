@@ -1,0 +1,330 @@
+[
+    {
+        "aiSuggestions": "Pick up your reserved car at Heathrow Airport",
+        "aiSuggestionsId": "car-rental-heathrow",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Car rental pickup schedule at Heathrow Airport",
+        "attendees": [
+            "user123",
+            "user456"
+        ],
+        "company": "City Wheels Car Rental",
+        "createdAt": 1670005200000,
+        "createdById": "user789",
+        "date": 1670026800000,
+        "eventType": "pickup",
+        "id": "rental001",
+        "likes": [
+            "user101",
+            "user202"
+        ],
+        "location": "Heathrow Airport",
+        "makeAndModel": "Ford Focus",
+        "maxTravelers": 5,
+        "notes": "The car is reserved under John Doe. Remember to inspect the car for damage before leaving the lot.",
+        "reservationName": "John Doe",
+        "tileGroupId": "group01",
+        "type": "TimelineCarRental",
+        "updatedAt": 1670011600000,
+        "votes": [],
+        "wishtripId": "wishtrip01"
+    },
+    {
+        "aiSuggestions": "Start your journey through the historical streets of London.",
+        "aiSuggestionsId": "123e4567-e89b-12d3-a456-426614174010",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Begin your London adventure with a personalized TimelineHeader inviting you to explore the city's rich history and modern attractions.",
+        "attendees": [
+            "JaneDoe",
+            "JohnDoe",
+            "Alice"
+        ],
+        "createdAt": 1672216800000,
+        "createdById": "789e4567-e89b-12d3-a456-426614174000",
+        "date": 1672303200000,
+        "id": "456e4567-e89b-12d3-a456-426614174012",
+        "likes": [
+            "Mike123",
+            "AnnaB"
+        ],
+        "title": "London Adventure Begins!",
+        "type": "TimelineHeader",
+        "updatedAt": 1672389600000,
+        "votes": [
+            {
+                "userId": "user001",
+                "value": "yes"
+            },
+            {
+                "userId": "user002",
+                "value": "no"
+            }
+        ],
+        "wishtripId": "789e4567-e89b-12d3-a456-426614174020"
+    },
+    {
+        "aiSuggestions": "Arrive in style with British Airways",
+        "aiSuggestionsId": "ba-suggestion-01",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "British Airways flight for crossing the Atlantic with comfort and service",
+        "airline": "British Airways",
+        "arrivalAirportCode": "LHR",
+        "attendees": [],
+        "confirmationNumber": "BA12345X",
+        "createdAt": 1679980800,
+        "createdById": "user-918273645",
+        "currency": "GBP",
+        "date": 1680266400,
+        "departureAirportCode": "JFK",
+        "endDate": 1680352800,
+        "flightNo": "BA178",
+        "id": "ba-flight-001",
+        "likes": [],
+        "link": "https://www.britishairways.com/en-gb/flights-and-holidays/flights",
+        "notes": "Make sure to check in online 24 hours before the flight.",
+        "price": 950.0,
+        "tileGroupId": "group-123456780",
+        "type": "TimelineFlight",
+        "updatedAt": 1680045600,
+        "votes": [],
+        "wishtripId": "wishtrip-876543210"
+    },
+    {
+        "aiSuggestions": "Explore ancient history",
+        "aiSuggestionsId": "ai_234523",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Private guided tour at the British Museum with ancient artifacts.",
+        "attendees": [
+            "user1234",
+            "user5678"
+        ],
+        "createdAt": 1670000000,
+        "createdById": "user2345",
+        "date": 1670020000,
+        "favicon": "https://example.com/favicon.ico",
+        "id": "timelineLink123456",
+        "imageUrl": "https://example.com/image.jpg",
+        "likes": [
+            "user1122",
+            "user3344"
+        ],
+        "pageTitle": "British Museum Private Guided Tour",
+        "type": "TimelineLink",
+        "updatedAt": 1670000100,
+        "url": "https://britishmuseumtours.example.com/privateguidedtour",
+        "votes": [
+            {
+                "userId": "user3344",
+                "value": "yes"
+            },
+            {
+                "userId": "user5566",
+                "value": "no"
+            }
+        ],
+        "websiteName": "British Museum Tours",
+        "wishtripId": "wishtrip123"
+    },
+    {
+        "aiSuggestions": "Luxury stay in the heart of the city at Langham Hotel with premium amenities for an unforgettable experience.",
+        "aiSuggestionsId": "suggestion-1234",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Check into the luxurious Langham Hotel offering premium amenities and an ideal location in the city.",
+        "attendees": [
+            "user-5678",
+            "user-9012"
+        ],
+        "createdAt": 1670000000,
+        "createdById": "user-3456",
+        "date": 1670020000,
+        "id": "checkin-7890",
+        "likes": [
+            "user-1122",
+            "user-3344"
+        ],
+        "location": "Langham Hotel, City Center",
+        "lodgingType": "hotel",
+        "name": "The Langham Hotel",
+        "notes": "Make sure to enjoy the spa and heated pool!",
+        "tileGroupId": "group-101112",
+        "type": "TimelineLodgingCheckIn",
+        "updatedAt": 1670025000,
+        "votes": [],
+        "wishtripId": "wishtrip-131415"
+    },
+    {
+        "aiSuggestions": "Experience a breathtaking theatre performance in the heart of London's West End.",
+        "aiSuggestionsId": "sugg-nr23648",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "West End theatre show with world-class performances, including dramas, comedies, and musicals.",
+        "attendees": [
+            "usr-12345",
+            "usr-23456"
+        ],
+        "createdAt": 1670000000,
+        "createdById": "usr-creator",
+        "date": 1670020000,
+        "endDate": 1670027200,
+        "experienceVideoIds": [
+            "video-765432"
+        ],
+        "id": "prod-98765",
+        "images": [
+            "img-56789",
+            "img-67890"
+        ],
+        "likes": [
+            "usr-34567",
+            "usr-45678"
+        ],
+        "link": "https://example-theatre.com/bookings",
+        "location": "The Majesty's Theatre, London",
+        "notes": "Dress code is smart casual. Arrive 15 minutes early for best seats.",
+        "pickUpLocationName": "",
+        "tileGroupId": "grp-123",
+        "title": "Thrilling West End Show",
+        "type": "product",
+        "updatedAt": 1670000200,
+        "votes": [
+            {
+                "userId": "usr-56789",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wish-trip-78910"
+    },
+    {
+        "aiSuggestions": "Visit the Tower of London and witness the traditional Ceremony of the Keys.",
+        "aiSuggestionsId": "cere-001",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Witness the historic Ceremony of the Keys at the Tower of London, a nightly event where the Tower is secured by the Beefeaters.",
+        "attendees": [
+            "usr-12345678",
+            "usr-87654321"
+        ],
+        "createdAt": 1679980800,
+        "createdById": "usr-11223344",
+        "date": 1682563200,
+        "description": "Experience one of the oldest remaining ceremonies in the UK, dating back over 700 years.",
+        "id": "tlg-54637281",
+        "imageURI": "https://example.com/images/ceremony-of-keys.jpg",
+        "likes": [
+            "usr-12345678",
+            "usr-87654321",
+            "usr-11224488"
+        ],
+        "name": "Ceremony of the Keys",
+        "price": 0.0,
+        "purchased": false,
+        "sku": "TL-LONDON-KEYS",
+        "state": "active",
+        "status": "active",
+        "tileGroupId": "tg-13049850",
+        "title": "Ceremony of the Keys at Tower of London",
+        "type": "TimelineGoods",
+        "updatedAt": 1679980800,
+        "variantId": "var-001",
+        "votes": [
+            {
+                "userId": "usr-87654321",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wt-24567891"
+    },
+    {
+        "aiSuggestions": "How about a river cruise for a unique view of the city?",
+        "aiSuggestionsId": "sugg-12345",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "River cruise along the Thames to see landmarks",
+        "arrivalLocation": "Westminster",
+        "attendees": [
+            "user-1985",
+            "user-2023"
+        ],
+        "confirmationNumber": "RC198-4567-TM",
+        "createdAt": 1670005600,
+        "createdById": "user-501",
+        "date": 1670092000,
+        "departureLocation": "Tower Pier",
+        "endDate": 1670099200,
+        "id": "trans-5678",
+        "likes": [
+            "user-102",
+            "user-214"
+        ],
+        "link": "https://www.thamesrivercruise.co.uk",
+        "maxTravelers": 50,
+        "notes": "Remember to bring a camera for the amazing views!",
+        "tileGroupId": "tg-32648",
+        "transportationType": "boat",
+        "type": "TimelineTransportation",
+        "updatedAt": 1670040000,
+        "votes": [
+            {
+                "userId": "user-1985",
+                "value": "yes"
+            },
+            {
+                "userId": "user-2023",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wish-78359"
+    },
+    {
+        "aiSuggestions": "Did you remember to check all drawers and the safe?",
+        "aiSuggestionsId": "a7b8bc3e-f234-4b6d-a8d9-f3e7b5721135",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Check out from the Langham Hotel as your London journey comes to a close.",
+        "attendees": [
+            "935fda76-4d5a-4c7d-b9a9-8a1234567890"
+        ],
+        "createdAt": 1679769600,
+        "createdById": "a123bc45-d678-e910-f111-g1234h56i78j",
+        "date": 1679856000,
+        "id": "ac33de42-c123-4e56-7890-1abc234d5ef6",
+        "likes": [
+            "f157e2a3-4b5c-6d7e-8f91-g11hijk121lm"
+        ],
+        "location": "London, United Kingdom",
+        "lodgingType": "hotel",
+        "name": "Langham Hotel",
+        "notes": "Remember to leave the key card at reception.",
+        "tileGroupId": "00112233-4455-6677-8899-aabbccddeeff",
+        "type": "TimelineLodgingCheckout",
+        "updatedAt": 1679841600,
+        "votes": [],
+        "wishtripId": "12345678-abcd-1234-ef56-abcdef123456"
+    },
+    {
+        "aiSuggestions": "Experience elegant fine dining at The Ledbury, a Michelin-starred restaurant known for its innovative cuisine.",
+        "aiSuggestionsId": "a4f5bdea-4376-4453-a7ec-b92a3844b625",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Fine dining at The Ledbury, a Michelin-starred restaurant in London, UK.",
+        "attendees": [
+            "48e4b709-b85a-4fda-9306-8139ca17b07f"
+        ],
+        "createdAt": 1700000000,
+        "createdById": "ef3af8c9-203e-4757-b8e2-d3a3a3b1d7ab",
+        "date": 1700000100,
+        "description": "Dine at the famous The Ledbury, one of London's finest Michelin-starred restaurants.",
+        "endDate": 1700003700,
+        "id": "c0285c5e-cf87-4581-acee-2b0890e65acd",
+        "likes": [
+            "0f6e68ee-b53e-47e1-995b-658cbf2b3e92"
+        ],
+        "link": "https://www.theledbury.com",
+        "location": "127 Ledbury Rd, London W11 2AQ, UK",
+        "meal": "dinner",
+        "notes": "Make sure to try the signature dish!",
+        "priceRange": "$$$",
+        "reservationName": "John Doe",
+        "restaurant": "The Ledbury",
+        "tileGroupId": "68a95571-7ba5-401b-82e9-0aa8c2bc4c52",
+        "type": "TimelineDining",
+        "updatedAt": 1700000500,
+        "votes": [],
+        "wishtripId": "145b7108-80fc-4df2-b9df-57d98d1f5dcd"
+    }
+]

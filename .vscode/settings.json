@@ -4,10 +4,13 @@
   },
   "python.analysis.extraPaths": ["./local_dependencies"],
   "cSpell.words": [
+    "idxs",
     "langchain",
+    "openai",
     "tqdm",
     "unbookmarked",
     "unliked",
-    "weaviate"
+    "weaviate",
+    "WISHTRIP"
   ]
 }

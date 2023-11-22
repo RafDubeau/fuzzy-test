@@ -12,5 +12,5 @@ else
 fi
 
 # Install FuzzyTypes into the local directory
-pip install -t $directory git+https://github.com/bright-blue-im/FuzzyTypes.git@62334349271d6a8b3e0dee4f0baeb450da0c875f
+pip install -t $directory git+https://github.com/bright-blue-im/FuzzyTypes.git
 

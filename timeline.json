@@ -1,0 +1,353 @@
+[
+    {
+        "aiSuggestions": "Want to see more of London? Check out these hidden gems!",
+        "aiSuggestionsId": "sug-1234567890",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Begin your London Adventure with these top recommendations.",
+        "attendees": [
+            "user-1548df",
+            "user-84211ab"
+        ],
+        "createdAt": 1657894321,
+        "createdById": "user-4567df",
+        "date": 1657894321,
+        "id": "th-0011223344",
+        "likes": [
+            "user-a1b2c3",
+            "user-d4e5f6"
+        ],
+        "title": "Welcome to your London Adventure!",
+        "type": "TimelineHeader",
+        "updatedAt": 1678901234,
+        "votes": [
+            {
+                "userId": "user-1122a",
+                "value": "yes"
+            },
+            {
+                "userId": "user-3344b",
+                "value": "no"
+            }
+        ],
+        "wishtripId": "wt-7890123456"
+    },
+    {
+        "aiSuggestions": "Check-in for your flight.",
+        "aiSuggestionsId": "aisg-abc123",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Flight to LHR on March 25.",
+        "airline": "Example Air",
+        "arrivalAirportCode": "LHR",
+        "attendees": [
+            "user123"
+        ],
+        "confirmationNumber": "CONF123456",
+        "createdAt": 1679798400000,
+        "createdById": "user987",
+        "currency": "USD",
+        "date": 1679916000000,
+        "departureAirportCode": "JFK",
+        "endDate": 1679959200000,
+        "flightNo": "EA123",
+        "id": "flight001",
+        "likes": [],
+        "link": "http://exampleairline.com/booking",
+        "notes": "",
+        "price": 500.0,
+        "tileGroupId": "group123",
+        "type": "TimelineFlight",
+        "updatedAt": 1679802000000,
+        "votes": [],
+        "wishtripId": "wishtrip456"
+    },
+    {
+        "aiSuggestions": "Pick up your rental car after landing",
+        "aiSuggestionsId": "sug-12345",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Rental car pickup at airport after flight arrival",
+        "attendees": [
+            "user123",
+            "user234"
+        ],
+        "company": "Global Rentals",
+        "createdAt": 1670000000,
+        "createdById": "user123",
+        "date": 1670025000,
+        "eventType": "pickup",
+        "id": "carental123",
+        "likes": [
+            "user345",
+            "user456"
+        ],
+        "location": "City Airport",
+        "makeAndModel": "Toyota Corolla",
+        "notes": "Reservation under John Doe, confirmation number ABC123456",
+        "reservationName": "John Doe",
+        "tileGroupId": "group456",
+        "type": "TimelineCarRental",
+        "updatedAt": 1670000200,
+        "votes": [
+            {
+                "userId": "user678",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wishtrip789"
+    },
+    {
+        "aiSuggestions": "Historic Tower of London Guided Tour",
+        "aiSuggestionsId": "sugg-12345",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Join the exclusive guided tour to explore the rich history of the Tower of London",
+        "arrivalLocation": "Tower of London",
+        "attendees": [
+            "user-67890",
+            "user-23456"
+        ],
+        "createdAt": 1670000000,
+        "createdById": "user-67890",
+        "date": 1670022000,
+        "departureLocation": "Hotel London",
+        "endDate": 1670040000,
+        "id": "tile-891011",
+        "likes": [
+            "user-34567",
+            "user-45678"
+        ],
+        "transportationType": "bus",
+        "type": "TimelineTransportation",
+        "updatedAt": 1670000100,
+        "votes": [
+            {
+                "userId": "user-23456",
+                "value": "yes"
+            },
+            {
+                "userId": "user-67890",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wt-123456789"
+    },
+    {
+        "type": "TimelineDining",
+        "id": "res_45678392",
+        "createdAt": 1655230800000,
+        "createdById": "user_8290345",
+        "updatedAt": 1655317200000,
+        "date": 1655393600000,
+        "endDate": 1655397200000,
+        "restaurant": "The Shard",
+        "location": "32 London Bridge St, London SE1 9SG, UK",
+        "meal": "dinner",
+        "description": "Exquisite dining experience with panoramic views of the city.",
+        "reservationName": "Smith",
+        "priceRange": "$$$",
+        "link": "https://www.theshard.com/restaurants/",
+        "attendees": [
+            "user_8290345",
+            "user_9820130",
+            "user_7639128"
+        ],
+        "likes": [],
+        "votes": [],
+        "wishtripId": "wish_509382094",
+        "aiSuggestions": "Why not enjoy a spectacular evening with dinner at The Shard?",
+        "aiSuggestionsId": "sugg_99381201",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Dinner reservation at The Shard's restaurant.",
+        "notes": "Remember to ask for a window table for the best city views."
+    },
+    {
+        "aiSuggestions": "Consider exploring the city after checking in",
+        "aiSuggestionsId": "sugg-9834729",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Check-in at Grand London Hotel, central city location, close to landmarks and transport.",
+        "attendees": [
+            "user-561903",
+            "user-561904"
+        ],
+        "createdAt": 1673036800,
+        "createdById": "user-561903",
+        "date": 1673131200,
+        "id": "lodging-8250342",
+        "likes": [
+            "user-561905",
+            "user-561906"
+        ],
+        "link": "http://www.grandlondonhotel.com/check-in",
+        "location": "Grand London Hotel, London, United Kingdom",
+        "lodgingType": "hotel",
+        "name": "Grand London Hotel",
+        "notes": "Located in the heart of the city, the Grand London Hotel offers convenient access to famous sites.",
+        "tileGroupId": "group-2304823",
+        "type": "TimelineLodgingCheckIn",
+        "updatedAt": 1673036880,
+        "votes": [
+            {
+                "userId": "user-561907",
+                "value": "yes"
+            },
+            {
+                "userId": "user-561908",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wishtrip-305923"
+    },
+    {
+        "aiSuggestions": "Afternoon tea at Fortnum & Mason is a quintessential British experience not to be missed.",
+        "aiSuggestionsId": "ai-sugg-8392023",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Booking afternoon tea at Fortnum & Mason for a wonderful traditional experience.",
+        "attendees": [
+            "user-1234",
+            "user-5678"
+        ],
+        "createdAt": 1670005200000,
+        "createdById": "user-3345",
+        "date": 1670023200000,
+        "endDate": 1670028600000,
+        "id": "dine-83920",
+        "likes": [
+            "user-7689",
+            "user-8790"
+        ],
+        "location": "Fortnum & Mason, London, UK",
+        "meal": "snack",
+        "notes": "Don't forget to try the scones with clotted cream!",
+        "priceRange": "$$$",
+        "reservationName": "John Doe",
+        "restaurant": "Fortnum & Mason",
+        "tileGroupId": "tg-83920-group",
+        "type": "TimelineDining",
+        "updatedAt": 1670010000000,
+        "votes": [
+            {
+                "userId": "user-1224",
+                "value": "yes"
+            },
+            {
+                "userId": "user-5678",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wish-83920456"
+    },
+    {
+        "aiSuggestions": "Make sure to check all the drawers for any items you might leave behind.",
+        "aiSuggestionsId": "aisug-8402",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Check-out from the Grand London Hotel and go to the airport before 11:00 AM.",
+        "attendees": [
+            "user_12",
+            "user_34"
+        ],
+        "createdAt": 1679989200,
+        "createdById": "user_56",
+        "date": 1679996400,
+        "id": "lodging-checkout-789",
+        "likes": [
+            "user_78",
+            "user_90"
+        ],
+        "location": "Grand London Hotel",
+        "lodgingType": "hotel",
+        "name": "Grand London Hotel Checkout",
+        "notes": "Called a taxi to leave for the airport at 10:30 AM.",
+        "tileGroupId": "tilegroup-1234",
+        "type": "TimelineLodgingCheckout",
+        "updatedAt": 1679992800,
+        "votes": [
+            {
+                "userId": "user_12",
+                "value": "yes"
+            },
+            {
+                "userId": "user_34",
+                "value": "yes"
+            }
+        ],
+        "wishtripId": "wishtrip-456"
+    },
+    {
+        "aiSuggestions": "Explore historical artifacts from around the world at the British Museum.",
+        "aiSuggestionsId": "aibritmuseumsugg1",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Visit to British Museum",
+        "attendees": [
+            "user1",
+            "user2"
+        ],
+        "createdAt": 1670001234,
+        "createdById": "user123",
+        "date": 1670080000,
+        "favicon": "https://www.britishmuseum.org/favicon.ico",
+        "id": "link123",
+        "imageUrl": "https://www.britishmuseum.org/sites/default/files/styles/bm_image_gallery_full_width/public/2021-01/001-317735_1.jpg",
+        "likes": [
+            "user3",
+            "user4"
+        ],
+        "link": "https://www.britishmuseum.org/visit",
+        "notes": "Make sure to check out the Rosetta Stone, the Egyptian mummies, and the Elgin Marbles.",
+        "pageDescription": "The British Museum, located in the heart of London, houses a vast collection of world art and artefacts and is free to all visitors.",
+        "pageTitle": "Visit the British Museum | Tickets & Info",
+        "tileGroupId": "group123",
+        "type": "TimelineLink",
+        "updatedAt": 1670023456,
+        "url": "https://www.britishmuseum.org",
+        "votes": [
+            {
+                "userId": "user5",
+                "value": "yes"
+            },
+            {
+                "userId": "user6",
+                "value": "no"
+            }
+        ],
+        "websiteName": "The British Museum",
+        "wishtripId": "wishtrip123"
+    },
+    {
+        "aiSuggestions": "Evening show at the Royal Opera House is a must-see event!",
+        "aiSuggestionsId": "ai_1gGkA203dZX",
+        "aiSuggestionsType": "base",
+        "aiTextDescription": "Evening performance scheduled at the Royal Opera House.",
+        "attendees": [
+            "user_832jd929dD",
+            "user_302jdLpOI2"
+        ],
+        "createdAt": 1670006400000,
+        "createdById": "user_jd892Dd32X",
+        "date": 1670092800000,
+        "favicon": "https://royaloperahouse.example/favicon.ico",
+        "id": "tile_Hk91mzOpW67B",
+        "imageUrl": "https://royaloperahouse.example/opera-evening-show.jpg",
+        "likes": [
+            "user_A9dkl39Dk9",
+            "user_9makLJ92ld"
+        ],
+        "link": "https://royaloperahouse.example/book-tickets",
+        "notes": "Remember to book tickets in advance!",
+        "pageDescription": "Enjoy an unforgettable evening with world-class performances at the Royal Opera House.",
+        "pageTitle": "Evening Show at the Royal Opera House - Book Now",
+        "tileGroupId": "group_3JkLm92jD8s",
+        "type": "TimelineLink",
+        "updatedAt": 1670020000000,
+        "url": "https://royaloperahouse.example/shows/evening-performance",
+        "votes": [
+            {
+                "userId": "user_8JmKl12nD9l",
+                "value": "yes"
+            },
+            {
+                "userId": "user_7nLpd82mJkD",
+                "value": "no"
+            }
+        ],
+        "websiteName": "Royal Opera House",
+        "wishtripId": "wishtrip_9mLDk021j3"
+    }
+]
