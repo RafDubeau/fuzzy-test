@@ -12,7 +12,7 @@ def generate_wishtrip():
         "add_sample_wishtrip",
         user_id=user_id,
         wishtrip_id=wishtrip_id,
-        location="London",
+        location="Minneapolis",
         n_tiles=20,
     )
 
@@ -23,12 +23,13 @@ def suggestions():
     post(
         "add_wishtrip_suggestions",
         wishtrip_id=wishtrip_id,
+        n_suggestions=5,
     )
 
 
 if __name__ == "__main__":
     # Clears any existing wishtrip and generates a new sample wishtrip
-    generate_wishtrip()
+    # generate_wishtrip()
 
     # Clears any existing suggestions and generates new suggestions
     suggestions()

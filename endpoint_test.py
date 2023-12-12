@@ -463,6 +463,8 @@ def backend_recommendation_test():
 
 
 def generate_trending():
+    post("clear_interaction_data")
+    post("simulate_interaction_events", num_events=600)
     post("request_new_trending_videos")
 
 
@@ -482,8 +484,30 @@ def suggestion_test(
     # )
 
 
+def debugging_recommendations():
+    # post(
+    #     "add_interaction_event",
+    #     interactionType="opened-app",
+    #     userId="kPtLzCNeMLNvSLutIzehnQIl7mf1",
+    #     referenceType="None",
+    #     referenceId="",
+    #     routerPath="test",
+    #     value=1,
+    # )
+
+    post(
+        "add_interaction_event",
+        interactionType="watched",
+        userId="kPtLzCNeMLNvSLutIzehnQIl7mf1",
+        referenceType="RecommendedExperienceVideo",
+        referenceId="b36b8f5d-f009-4175-85b3-8f8def069e5d",
+        routerPath="test",
+        value=0.87,
+    )
+
+
 if __name__ == "__main__":
-    suggestion_test()
+    generate_trending()
 
 
 """
