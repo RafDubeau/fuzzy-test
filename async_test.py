@@ -97,16 +97,6 @@ def wv_auto_schema(
     return schema
 
 
-class QueryArgs(TypedDict):
-    className: str
-    properties: List[str]
-    additional: List[str]
-    where: List[str]
-    limit: Optional[int]
-    nearVector: Optional[str]
-    nearText: Optional[str]
-
-
 T = TypeVar("T", bound=TypedDict)
 
 
@@ -167,169 +157,116 @@ class WeaviateClient(Generic[T]):
         fields: Optional[str | list[str]] = None,
         additional: Optional[str | list[str]] = None,
         excluded_ids: Optional[str | list[str]] = None,
-    ) -> QueryArgs:
-        query: QueryArgs = {
-            "className": self.class_name,
-            "properties": [],
-            "additional": [],
-            "limit": None,
-            "where": [],
-            "nearVector": None,
-            "nearText": None,
-        }
-
+    ) -> GetBuilder:
         if fields is None:
             fields = [property["name"] for property in self.class_schema["properties"]]
-        query["properties"] = self.__listify(fields)
+        fields = self.__listify(fields)
+
+        query = self.wv_client.query.get(self.class_name, fields)
 
         if additional is not None:
-            query["additional"] = self.__listify(additional)
+            additional = self.__listify(additional)
+            query = query.with_additional(additional)
 
         if excluded_ids is not None:
-            query["where"] = [
-                '{{ path: ["id"], operator: NotEqual, valueText: "{excluded_id}" }}'.format(
-                    excluded_id=excluded_id
-                )
-                for excluded_id in self.__listify(excluded_ids)
-            ]
+            query = query.with_where(
+                {
+                    "operator": "And",
+                    "operands": [
+                        {
+                            "path": ["id"],
+                            "operator": "NotEqual",
+                            "valueString": excluded_id,
+                        }
+                        for excluded_id in self.__listify(excluded_ids)
+                    ],
+                }
+            )
 
         return query
 
-    def __query_args_to_gql_str(self, query: QueryArgs) -> str:
-        query_template = """
-        {{
-            Get {{
-                {className}{operators} {{
-                    {properties}
-                }}
-            }}
-        }}
-        """
+    def __execute_query(self, query: GetBuilder) -> dict:
+        return query.do()
 
-        operators = []
-        if len(query["where"]) > 0:
-            if len(query["where"]) == 1:
-                operators.append(f'where: {query["where"][0]}')
-            else:
-                operators.append(
-                    'where: {{operator: "And", operands: [{conditions}]}}'.format(
-                        conditions=", ".join(query["where"])
-                    )
-                )
-        if query["limit"] is not None:
-            operators.append(f"limit: {query['limit']}")
-        if query["nearVector"] is not None:
-            operators.append("nearVector: {vector}".format(vector=query["nearVector"]))
-        if query["nearText"] is not None:
-            operators.append("nearText: {text}".format(text=query["nearText"]))
-
-        if len(operators) > 0:
-            operators_str = f'({", ".join(operators)})'
-        else:
-            operators_str = ""
-
-        if len(query["additional"]) > 0:
-            properties_str = ", ".join(
-                query["properties"]
-                + [f"_additional{{ {', '.join(query['additional'])} }}"]
-            )
-        else:
-            properties_str = ", ".join(query["properties"])
-
-        query_str = query_template.format(
-            operators=operators_str,
-            className=query["className"],
-            properties=properties_str,
-        ).replace("'", '"')
-
-        print(query_str)
-
-        return query_str
-
-    def __execute_query(self, query: QueryArgs) -> dict:
-        client = self.__get_async_wv_client(
-            url=self.weaviate_url,
-            weaviate_api_key=self.weaviate_api_key,
-            openai_api_key=self.openai_api_key,
-        )
-
-        query_str = self.__query_args_to_gql_str(query)
-        query = gql(query_str)
-
-        self.wv_client.query.get(self.class_name, "productTitle")
-
-        return client.execute(query)
-
-    async def __execute_query_async(self, query: QueryArgs) -> dict:
+    async def __execute_query_async(self, query: GetBuilder) -> dict:
         async_client = self.__get_async_wv_client(
             url=self.weaviate_url,
             weaviate_api_key=self.weaviate_api_key,
             openai_api_key=self.openai_api_key,
         )
 
-        query_str = self.__query_args_to_gql_str(query)
+        query_str = query.build()
         query = gql(query_str)
 
         return await async_client.execute_async(query)
 
-    def __get_query_by_uuid_args(
+    def __build_query_by_uuid(
         self,
         uuid: str | Iterable[str],
         fields: Optional[str | Iterable[str]] = None,
         additional: Optional[str | Iterable[str]] = None,
-    ) -> QueryArgs:
+    ) -> GetBuilder:
         query = self.__base_query(fields=fields, additional=additional)
         uuid = self.__listify(uuid)
 
-        id_query_format = '{{ path: ["id"], operator: Equal, valueText: "{uuid}" }}'
         if len(uuid) == 1:
-            query["where"].append(id_query_format.format(uuid=uuid[0]))
+            query = query.with_where(
+                {
+                    "path": ["id"],
+                    "operator": "Equal",
+                    "valueString": uuid,
+                }
+            )
         else:
-            query["where"].append(
-                "{{ operator: Or, operands: [{conditions}]}}".format(
-                    conditions=", ".join(
-                        id_query_format.format(uuid=_uuid) for _uuid in uuid
-                    )
-                )
+            query = query.with_where(
+                {
+                    "operator": "Or",
+                    "operands": [
+                        {
+                            "path": ["id"],
+                            "operator": "Equal",
+                            "valueString": id,
+                        }
+                        for id in uuid
+                    ],
+                }
             )
 
         return query
 
-    def __get_query_by_vector_args(
+    def __build_query_by_vector(
         self,
         vector: np.ndarray | list[float],
         limit: int = 10,
-        excluded_ids: Optional[list[str]] = None,
-        fields: Optional[list[str]] = None,
-        additional: Optional[list[str]] = None,
-    ) -> QueryArgs:
+        excluded_ids: Optional[str | list[str]] = None,
+        fields: Optional[str | list[str]] = None,
+        additional: Optional[str | list[str]] = None,
+    ) -> GetBuilder:
         query = self.__base_query(
             fields=fields, additional=additional, excluded_ids=excluded_ids
         )
         if not isinstance(vector, list):
             vector = vector.tolist()
 
-        query["nearVector"] = "{{ vector: {vector} }}".format(vector=vector)
-        query["limit"] = limit
+        query = query.with_near_vector({"vector": vector}).with_limit(limit)
 
         return query
 
-    def __get_query_by_text_args(
+    def __build_query_by_text(
         self,
         text: str | list[str],
         limit: int = 10,
         excluded_ids: Optional[list[str]] = None,
         fields: Optional[list[str]] = None,
         additional: Optional[list[str]] = None,
-    ) -> QueryArgs:
+    ) -> GetBuilder:
         query = self.__base_query(
             fields=fields, additional=additional, excluded_ids=excluded_ids
         )
 
         text = self.__listify(text)
 
-        query["nearText"] = "{{ concepts: {text} }}".format(text=text)
-        query["limit"] = limit
+        query = query.with_near_text({"concepts": text}).with_limit(limit)
 
         return query
 
@@ -339,7 +276,7 @@ class WeaviateClient(Generic[T]):
         fields: Optional[list[str]] = None,
         additional: Optional[list[str]] = None,
     ) -> Dict:
-        query = self.__get_query_by_uuid_args(
+        query = self.__build_query_by_uuid(
             uuid=uuid,
             fields=fields,
             additional=additional,
@@ -353,7 +290,7 @@ class WeaviateClient(Generic[T]):
         fields: Optional[list[str]] = None,
         additional: Optional[list[str]] = None,
     ) -> Dict:
-        query = self.__get_query_by_uuid_args(
+        query = self.__build_query_by_uuid(
             uuid=uuid,
             fields=fields,
             additional=additional,
@@ -369,7 +306,7 @@ class WeaviateClient(Generic[T]):
         fields: Optional[list[str]] = None,
         additional: Optional[list[str]] = None,
     ) -> Dict:
-        query = self.__get_query_by_vector_args(
+        query = self.__build_query_by_vector(
             vector=vector,
             limit=limit,
             excluded_ids=excluded_ids,
@@ -387,7 +324,7 @@ class WeaviateClient(Generic[T]):
         fields: Optional[list[str]] = None,
         additional: Optional[list[str]] = None,
     ) -> Dict:
-        query = self.__get_query_by_vector_args(
+        query = self.__build_query_by_vector(
             vector=vector,
             limit=limit,
             excluded_ids=excluded_ids,
@@ -405,7 +342,7 @@ class WeaviateClient(Generic[T]):
         fields: Optional[list[str]] = None,
         additional: Optional[list[str]] = None,
     ) -> Dict:
-        query = self.__get_query_by_text_args(
+        query = self.__build_query_by_text(
             text=text,
             limit=limit,
             excluded_ids=excluded_ids,
@@ -423,7 +360,7 @@ class WeaviateClient(Generic[T]):
         fields: Optional[list[str]] = None,
         additional: Optional[list[str]] = None,
     ) -> Dict:
-        query = self.__get_query_by_text_args(
+        query = self.__build_query_by_text(
             text=text,
             limit=limit,
             excluded_ids=excluded_ids,
@@ -431,7 +368,7 @@ class WeaviateClient(Generic[T]):
             additional=additional,
         )
 
-        return self.__execute_query_async(query)
+        return await self.__execute_query_async(query)
 
     def import_data(
         self,
@@ -452,11 +389,6 @@ class WeaviateClient(Generic[T]):
         self.wv_client.batch.configure(batch_size=batch_size)
         with self.wv_client.batch as batch:
             for i, d in enumerate(data):
-                if self.verbose:
-                    print(f"importing item: {i+1}")
-
-                # properties = {key: d[value] for key, value in self.field_map.items()}
-
                 if uuids is not None:
                     batch.add_data_object(
                         uuid=uuids[i],
@@ -477,6 +409,33 @@ class WeaviateClient(Generic[T]):
                 uuid=id,
                 class_name=self.class_name,
             )
+
+    def get_id_list(self, limit: int = 100):
+        query = self.__base_query(fields=[], additional=["id"]).with_limit(limit)
+        response = self.__execute_query(query)
+
+        id_list = [
+            item["_additional"]["id"]
+            for item in response["data"]["Get"][self.class_name]
+        ]
+
+        return id_list
+
+    def get_embeddings(self, id_list: str | list[str]) -> dict[str, list[float]]:
+        if isinstance(id_list, str):
+            id_list = [id_list]
+
+        embeddings: dict[str, list[float]] = {}
+        response = self.query_by_uuid(id_list, fields=[], additional=["id", "vector"])
+        for data in response["data"]["Get"][self.class_name]:
+            embeddings[data["_additional"]["id"]] = data["_additional"]["vector"]
+
+        return embeddings
+
+    def update_embedding(self, id: str, embedding: list[float]) -> None:
+        self.wv_client.data_object.update(
+            data_object={}, uuid=id, class_name=self.class_name, vector=embedding
+        )
 
 
 experience_video_class_obj = {
@@ -515,18 +474,18 @@ async def main() -> None:
             fields=["productTitle", "productLocation"],
             additional=["id"],
         ),
-        # client.query_by_vector_async(
-        #     vector=np.random.rand(1536),
-        #     limit=3,
-        #     fields=["productTitle", "productLocation"],
-        #     additional=["id"],
-        # ),
-        # client.query_by_text_async(
-        #     text="beach",
-        #     limit=3,
-        #     fields=["productTitle", "productLocation"],
-        #     additional=["id"],
-        # ),
+        client.query_by_vector_async(
+            vector=np.random.rand(1536),
+            limit=3,
+            fields=["productTitle", "productLocation"],
+            additional=["id"],
+        ),
+        client.query_by_text_async(
+            text="beach",
+            limit=3,
+            fields=["productTitle", "productLocation"],
+            additional=["id"],
+        ),
     )
 
     for result in results:
